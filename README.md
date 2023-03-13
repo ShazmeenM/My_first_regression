@@ -1,7 +1,7 @@
 # Project_documentation
 This repository stores automated templates on assumptions log, decision and issue register and quality assurance report.  
 # Software requirements  
-Python  
+Python/R  
 VSCode  
 Quarto  
 # Useful links  
