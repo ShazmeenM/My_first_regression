@@ -1,5 +1,5 @@
 # Project_documentation
-This repository stores automated templates on assumptions log, decision and issue register and quality assurance report.  
+This repository stores automated templates on assumptions log, commissioning template and quality assurance report.  
 # Software requirements  
 Python/R  
 VSCode  
