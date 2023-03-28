@@ -117,6 +117,7 @@ Description: Checks if the value of a variable is increasing over time.
 Data specific description: Total sale price of each dwelling type in time 't' should be less than time 't+1'.
 Status: 
 
+check if a series has the same data type, like number, letters, date etc
 ## Data characteristics' tests
 
 Test 1: Plot trend of sales and prices by dwelling types

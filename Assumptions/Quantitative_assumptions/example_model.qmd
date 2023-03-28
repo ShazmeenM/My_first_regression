@@ -2,15 +2,16 @@
 title: "Example Model"
 author: "Shazmeen Maroof"
 date: now
-execute:
-  echo: true
-format:
-  html:
-    embed-resources: true
-    toc: true
-    toc-title: "Contents"
-    toc-location: left
-    html-math-method: katex
+output:
+    html_document
+format: 
+    html:
+        embed-resources: true
+        theme: cosmo
+        code-fold: true
+        code-summary: "Show code"
+        code-overflow: wrap
+editor: visual
 ---
 
 <div style="text-align: justify"> 
@@ -32,9 +33,9 @@ The model has three assumptions
 
 1. House price should always be a positive number.
 2. Current trends in price will continue.
-3. There is no change in average house prices by local authority.  
+3. There is no change in house prices by local authority.  
 
-## Assumption recording and testing
+## Assumption recording
 
 This section shows how each assumption should be stored in code.  
 
@@ -46,21 +47,20 @@ This section shows how each assumption should be stored in code.
 # Impact: AMBER
 # Detailed description: We assume that no house is sold for a negative amount or for no value.
 ```
-
-
-2) Current trends in price will continue.
+  
+  2) Current trends in price will continue.
 
 ```{python}
 # Assumption: Current trends in price will continue.
 # Quality: RED
 # Impact: AMBER
-# Detailed description: We assume that the mean sale price of each dwelling type in a local authority in time 't' should be less than time 't+1'.
+# Detailed description: We assume that the median sale price of each dwelling type in a local authority in time 't' should be less than time 't+1'.
 ```
 
-3) There is no change in average house prices by local authority.  
+3) There is no change in house prices by local authority.  
 
 ```{python}
-# Assumption: There is no change in average house prices by local authority.
+# Assumption: There is no change in house prices by local authority.
 # Quality: RED
 # Impact: AMBER
 # Detailed description: We assume that there is no regional variation in house prices. 
