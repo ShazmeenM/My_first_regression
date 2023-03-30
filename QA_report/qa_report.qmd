@@ -110,6 +110,18 @@ Description: Checks if a certain value appears specific times in data.
 Data specific description: Checks if a local authority name appears only 5 times in the dataset.  
  Status: 
 ```{python}
+group = housing_sale_price.groupby('LA_Name')
+pd.DataFrame(group.size().reset_index())
+
+# can also try below
+
+group = housing_sale_price.groupby(['LA_Name'])['Detached'].count()
+
+# Convert groupby object to DataFrame 
+grouped_df = group.reset_index()
+print(grouped_df)
+print(type(grouped_df))
+```
 ```
 
 ## Test 7  

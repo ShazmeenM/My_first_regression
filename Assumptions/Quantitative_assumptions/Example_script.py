@@ -23,6 +23,10 @@ print(housing_sale_price_neg)
 # Detailed description: We assume that the median sale price of each dwelling type in a local authority in time 't' should be less than time 't+1'.
 
 # function testing the above assumption. It will return true if the assumptions holds and false otherwise.
+housing_sale_price
+group = housing_sale_price.groupby('LA_Name')
+group.first()
+
 
 
 # Assumption: There is no change in house prices by local authority.
@@ -31,3 +35,5 @@ print(housing_sale_price_neg)
 # Detailed description: We assume that there is no regional variation in house prices. 
 
 # function testing the above assumption. It will return true if the assumptions holds and false otherwise.
+
+
