@@ -47,25 +47,23 @@ This section shows how each assumption should be stored in code.
 # Impact: AMBER
 # Detailed description: We assume that no house is sold for a negative amount or for no value.
 
-
 import numpy as np
 import pandas as pd
 housing_sale_price = pd.read_excel("D:\\git_demo\\Data/Housing_data.xlsx", sheet_name="median_sale_price")
-group = housing_sale_price.groupby(['LA_Name', 'Year'])['Detached'].first()
 
-# Convert groupby object to DataFrame 
-grouped_df = group.reset_index()
-print(grouped_df)
-# Using Series.values.tolist()
-col_list = grouped_df["Detached"].values.tolist()
-print(col_list)
+# grouping rows (LA_Name) by columns (Year)
+group = housing_sale_price.groupby(['LA_Name', 'Year'])[['Detached', 'Semi-detached', 'Terraced', 'Flats']].first()
 
-# function testing the order of list
-def test(col_list):
-    return "Increasing." if all(col_list[i] < col_list[i + 1] for i in range(len(col_list) - 1)) else \
-        "Decreasing." if all(col_list[i + 1] < col_list[i] for i in range(len(col_list) - 1)) else \
-        "Not a monotonic sequence!"
-print(test(col_list))
+# computing row differences across groups
+group['Detached_trend'] = group['Detached'].diff()
+group['Semi-detached_trend'] = group['Semi-detached'].diff()
+group['Terraced_trend'] = group['Terraced'].diff()
+group['Flats_trend'] = group['Flats'].diff()
+
+print(group)
+# delete rows based on the condition of a column
+
+print(group.columns)
 
 ```
 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Shazmeen Maroof">
-<meta name="dcterms.date" content="2023-03-29">
+<meta name="dcterms.date" content="2023-03-30">
 
 <title>Example Model</title>
 <style>
@@ -2626,7 +2626,7 @@ vertical-align: -.125em;
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 29, 2023</p>
+      <p class="date">March 30, 2023</p>
     </div>
   </div>
   
@@ -2670,77 +2670,104 @@ vertical-align: -.125em;
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Impact: AMBER</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Detailed description: We assume that no house is sold for a negative amount or for no value.</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>housing_sale_price <span class="op">=</span> pd.read_excel(<span class="st">&quot;D:</span><span class="ch">\\</span><span class="st">git_demo</span><span class="ch">\\</span><span class="st">Data/Housing_data.xlsx&quot;</span>, sheet_name<span class="op">=</span><span class="st">&quot;median_sale_price&quot;</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>group <span class="op">=</span> housing_sale_price.groupby([<span class="st">&#39;LA_Name&#39;</span>, <span class="st">&#39;Year&#39;</span>])[<span class="st">&#39;Detached&#39;</span>].first()</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert groupby object to DataFrame </span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>grouped_df <span class="op">=</span> group.reset_index()</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(grouped_df)</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Using Series.values.tolist()</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>col_list <span class="op">=</span> grouped_df[<span class="st">&quot;Detached&quot;</span>].values.tolist()</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(col_list)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>housing_sale_price <span class="op">=</span> pd.read_excel(<span class="st">&quot;D:</span><span class="ch">\\</span><span class="st">git_demo</span><span class="ch">\\</span><span class="st">Data/Housing_data.xlsx&quot;</span>, sheet_name<span class="op">=</span><span class="st">&quot;median_sale_price&quot;</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># grouping rows (LA_Name) by columns (Year)</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>group <span class="op">=</span> housing_sale_price.groupby([<span class="st">&#39;LA_Name&#39;</span>, <span class="st">&#39;Year&#39;</span>])[[<span class="st">&#39;Detached&#39;</span>, <span class="st">&#39;Semi-detached&#39;</span>, <span class="st">&#39;Terraced&#39;</span>, <span class="st">&#39;Flats&#39;</span>]].first()</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># computing row differences across groups</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>group[<span class="st">&#39;Detached_trend&#39;</span>] <span class="op">=</span> group[<span class="st">&#39;Detached&#39;</span>].diff()</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>group[<span class="st">&#39;Semi-detached_trend&#39;</span>] <span class="op">=</span> group[<span class="st">&#39;Semi-detached&#39;</span>].diff()</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>group[<span class="st">&#39;Terraced_trend&#39;</span>] <span class="op">=</span> group[<span class="st">&#39;Terraced&#39;</span>].diff()</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>group[<span class="st">&#39;Flats_trend&#39;</span>] <span class="op">=</span> group[<span class="st">&#39;Flats&#39;</span>].diff()</span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test(col_list):</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">&quot;Increasing.&quot;</span> <span class="cf">if</span> <span class="bu">all</span>(col_list[i] <span class="op">&lt;</span> col_list[i <span class="op">+</span> <span class="dv">1</span>] <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(col_list) <span class="op">-</span> <span class="dv">1</span>)) <span class="cf">else</span> <span class="op">\</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;Decreasing.&quot;</span> <span class="cf">if</span> <span class="bu">all</span>(col_list[i <span class="op">+</span> <span class="dv">1</span>] <span class="op">&lt;</span> col_list[i] <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(col_list) <span class="op">-</span> <span class="dv">1</span>)) <span class="cf">else</span> <span class="op">\</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;Not a monotonic sequence!&quot;</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(test(col_list))</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>df3 <span class="op">=</span> pd.merge(housing_sale_price, group, how <span class="op">=</span> <span class="st">&quot;right&quot;</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(group)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (df3)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df3.columns)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># delete rows based on the condition of a column</span></span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>housing_sale_price[<span class="st">&#39;new&#39;</span>] <span class="op">=</span> housing_sale_price.groupby([<span class="st">&#39;LA_Name&#39;</span>, <span class="st">&#39;Year&#39;</span>])[<span class="st">&#39;Detached&#39;</span>].transform(<span class="kw">lambda</span> x : <span class="op">\</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>                      np.where(x.diff()<span class="op">&gt;</span><span class="dv">0</span>,<span class="st">&#39;incresase&#39;</span>,</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>                      np.where(x.diff()<span class="op">&lt;</span><span class="dv">0</span>,<span class="st">&#39;decrease&#39;</span>,<span class="st">&#39;--&#39;</span>)))</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(housing_sale_price)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(group.columns)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>       LA_Name  Year  Detached
-0    Allerdale  2000   91000.0
-1    Allerdale  2001  123675.0
-2    Allerdale  2002  124200.0
-3    Allerdale  2003  143500.0
-4    Allerdale  2004  238000.0
-..         ...   ...       ...
-485       York  2000  113500.0
-486       York  2001   95000.0
-487       York  2002  237000.0
-488       York  2003  195000.0
-489       York  2004  215000.0
+<pre><code>                Detached  Semi-detached  Terraced     Flats  Detached_trend  \
+LA_Name   Year                                                                
+Allerdale 2000   91000.0        54000.0   36750.0   48000.0             NaN   
+          2001  123675.0        74000.0   58500.0   49000.0         32675.0   
+          2002  124200.0        59950.0   44995.0   62225.0           525.0   
+          2003  143500.0        83000.0   63025.0   56750.0         19300.0   
+          2004  238000.0       159975.0  131475.0  100000.0         94500.0   
+...                  ...            ...       ...       ...             ...   
+York      2000  113500.0        72500.0   62950.0   68861.5        -61500.0   
+          2001   95000.0        55000.0   37500.0   90000.0        -18500.0   
+          2002  237000.0       138000.0  131375.0  135000.0        142000.0   
+          2003  195000.0       119950.0   93500.0   64000.0        -42000.0   
+          2004  215000.0       149725.0  120000.0  115997.5         20000.0   
 
-[490 rows x 3 columns]
-[91000.0, 123675.0, 124200.0, 143500.0, 238000.0, 86750.0, 100000.0, 200025.0, 249999.0, 277500.0, 207000.0, 225000.0, 232500.0, 130000.0, 149950.0, 88000.0, 155000.0, 177475.0, 160500.0, 237000.0, 160000.0, 135000.0, 179950.0, 249995.0, 315000.0, 155500.0, 351500.0, 176875.0, 140000.0, 228975.0, 85000.0, 83500.0, 145475.0, 164000.0, 241000.0, 90000.0, 80000.0, 190000.0, 124995.0, 240000.0, 76900.0, 136000.0, 183500.0, 215000.0, 280000.0, 134950.0, 148000.0, 260000.0, 395000.0, 300000.0, 222500.0, 350000.0, 240000.0, 215000.0, 400000.0, 186000.0, 90950.0, 155000.0, 245000.0, 550000.0, 150000.0, 138500.0, 142950.0, 232000.0, 292000.0, 222250.0, 195000.0, 96000.0, 128000.0, 220000.0, 92000.0, 95525.0, 122975.0, 246250.0, 285000.0, 162875.0, 440000.0, 118000.0, 129995.0, 249999.0, 132000.0, nan, 137000.0, 340250.0, 220000.0, 118000.0, 171000.0, 260000.0, 289500.0, 275000.0, 89950.0, 95975.0, 177950.0, 185975.0, 250000.0, 325000.0, 150950.0, 115000.0, 190000.0, 171000.0, 165000.0, 173000.0, 155000.0, 201950.0, 178500.0, 82000.0, 81500.0, 163350.0, 235000.0, 240000.0, 109000.0, 179950.0, 460000.0, 139995.0, 170000.0, 87000.0, 125000.0, 212000.0, 515000.0, 158750.0, 94247.5, 105000.0, 95000.0, 234000.0, 143000.0, 95000.0, 146000.0, 202750.0, 193000.0, 185000.0, 144997.5, 106687.5, 159500.0, 235000.0, 271225.0, 135050.0, 94995.0, 148975.0, 148750.0, 169950.0, 140000.0, 175000.0, 219250.0, 247000.0, 163350.0, 166125.0, 144975.0, 144000.0, 232500.0, 151000.0, 89950.0, 108000.0, 171000.0, 235000.0, 234974.5, 145000.0, 114950.0, 129950.0, 155000.0, 96000.0, 110000.0, 106500.0, 115250.0, 210000.0, 217950.0, 85975.0, 165000.0, 200000.0, 250000.0, 275000.0, 131250.0, 143500.0, 225000.0, 220000.0, 115250.0, 80000.0, 102000.0, 172500.0, 215000.0, 182000.0, 98000.0, 76725.0, 167500.0, 152000.0, 290000.0, 87995.0, 98500.0, 124750.0, 131500.0, 250000.0, 91000.0, 127497.5, 146562.5, 162500.0, 148975.0, 129950.0, 160000.0, 162500.0, 168000.0, 249995.0, 122500.0, 149950.0, 178500.0, 250000.0, 237000.0, 132250.0, 97000.0, 120000.0, 160000.0, 280000.0, 123750.0, 134000.0, 197750.0, 437500.0, 215000.0, nan, 110000.0, 295000.0, 198000.0, 180000.0, 69999.0, 133000.0, 121975.0, 250000.0, 220000.0, 99702.0, -114000.0, 187000.0, 219000.0, 223000.0, 91500.0, 132250.0, 114975.0, 229475.0, 172500.0, 137000.0, 240000.0, 380000.0, 250000.0, 245000.0, 149995.0, 210000.0, 249995.0, 135000.0, 232000.0, 125000.0, 125000.0, 203250.0, 226000.0, 129000.0, 89475.0, 114500.0, 90995.0, 195500.0, 172000.0, 149500.0, 137000.0, 158375.0, 222975.0, 470000.0, 114725.0, 147950.0, 219950.0, 170500.0, 200025.0, 155000.0, 160000.0, 142000.0, 150000.0, 180000.0, 88000.0, 138995.0, 151000.0, 232500.0, 239450.0, 76125.0, 120000.0, 135000.0, 220000.0, 236500.0, 72995.0, 160000.0, 99972.5, 220000.0, 243725.0, 142000.0, 145000.0, 179995.0, 285550.0, 415000.0, 98000.0, 268000.0, 171500.0, 145000.0, 175000.0, 84475.0, 192000.0, 164500.0, 209500.0, 260000.0, 102000.0, 165250.0, 230000.0, 274000.0, 165000.0, 116000.0, 153500.0, 214995.0, 305000.0, 245000.0, 138600.0, 166500.0, 264000.0, 300000.0, 217000.0, 163750.0, 148000.0, nan, 173000.0, 350000.0, 157000.0, 104000.0, 155000.0, 174000.0, 115000.0, 215500.0, 162500.0, 159950.0, 190000.0, 243250.0, 85000.0, 138250.0, 129000.0, 165000.0, 245000.0, 91995.0, 165500.0, 160000.0, 185000.0, 120000.0, 134000.0, 83950.0, 193000.0, 220000.0, 250000.0, 117500.0, 170000.0, 390000.0, 207000.0, 180000.0, 181972.5, nan, 106500.0, 195000.0, 250000.0, 400000.0, 90000.0, 116500.0, 215000.0, 250000.0, 175445.0, 83475.0, 95000.0, 187500.0, 249750.0, 95350.0, 132000.0, 180000.0, 249000.0, 122975.0, 138500.0, 149000.0, 200000.0, 285000.0, 321000.0, 145000.0, 182000.0, 205000.0, 187500.0, 183500.0, 137600.0, 150000.0, 129000.0, 197725.0, 249000.0, 124000.0, 140000.0, 205000.0, 279950.0, 296250.0, 149500.0, 240500.0, 280000.0, 192250.0, 227000.0, 87950.0, 92995.0, 95000.0, 176000.0, 183250.0, 74997.5, 160000.0, 187500.0, 244000.0, 310000.0, 144000.0, 173000.0, 270000.0, 225000.0, 220000.0, 125725.0, 186750.0, 183950.0, 168000.0, 177950.0, 103250.0, 160000.0, 179250.0, 209000.0, 300000.0, 150000.0, 250000.0, 189950.0, 187000.0, 221735.0, 124000.0, 119997.5, 195000.0, 266000.0, 305000.0, 105475.0, 165000.0, 189475.0, 175000.0, 159500.0, 125000.0, 99950.0, 130000.0, 205500.0, 252500.0, 94000.0, 99999.0, 135000.0, 210000.0, 178500.0, 215000.0, 246000.0, 165000.0, 188000.0, 250000.0, 125000.0, 179950.0, 142750.0, 182500.0, 200000.0, 155000.0, 123000.0, 165000.0, 132972.5, 116500.0, 134950.0, 116997.5, 197000.0, 188000.0, 118644.0, 159500.0, 225000.0, 297000.0, 249250.0, 166475.0, 335000.0, 181000.0, 173225.0, 425000.0, 207618.5, 240000.0, 136500.0, 158000.0, 235000.0, 307500.0, 249000.0, 149500.0, 118644.0, 148950.0, 175000.0, 113500.0, 95000.0, 237000.0, 195000.0, 215000.0]
-Not a monotonic sequence!</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>          Code               LA_Name  Year  All_dwelling_types  Detached  \
-0    E06000001            Hartlepool  2000             47000.0   87995.0   
-1    E06000002         Middlesbrough  2000             45000.0   89475.0   
-2    E06000003  Redcar and Cleveland  2000             50000.0   85000.0   
-3    E06000004      Stockton-on-Tees  2000             55950.0   87950.0   
-4    E06000005            Darlington  2000             52000.0   94247.5   
-..         ...                   ...   ...                 ...       ...   
-485  E07000061            Eastbourne  2004             46000.0   96000.0   
-486  E07000062              Hastings  2004             93000.0  148975.0   
-487  E07000063                 Lewes  2004            109000.0  172500.0   
-488  E07000064                Rother  2004             72500.0  120000.0   
-489  E07000065               Wealden  2004            124950.0  178500.0   
+                Semi-detached_trend  Terraced_trend  Flats_trend  
+LA_Name   Year                                                    
+Allerdale 2000                  NaN             NaN          NaN  
+          2001              20000.0         21750.0       1000.0  
+          2002             -14050.0        -13505.0      13225.0  
+          2003              23050.0         18030.0      -5475.0  
+          2004              76975.0         68450.0      43250.0  
+...                             ...             ...          ...  
+York      2000             -37500.0        -20775.0      -6138.5  
+          2001             -17500.0        -25450.0      21138.5  
+          2002              83000.0         93875.0      45000.0  
+          2003             -18050.0        -37875.0     -71000.0  
+          2004              29775.0         26500.0      51997.5  
 
-     Semi-detached  Terraced    Flats new  
-0          52500.0   25000.0  31475.0  --  
-1          52500.0   24000.0  33500.0  --  
-2          52000.0   33000.0  34000.0  --  
-3          49950.0   32000.0  31000.0  --  
-4          54000.0   31000.0  59995.0  --  
-..             ...       ...      ...  ..  
-485        50000.0   32000.0  35000.0  --  
-486        84500.0   74000.0  58000.0  --  
-487        99575.0   85000.0  79250.0  --  
-488        66950.0   48000.0  63500.0  --  
-489       118000.0   92000.0  69950.0  --  
+[490 rows x 8 columns]
+          Code                LA_Name  Year  All_dwelling_types  Detached  \
+0    E06000001             Hartlepool  2000             47000.0   87995.0   
+1    E06000002          Middlesbrough  2000             45000.0   89475.0   
+2    E06000003   Redcar and Cleveland  2000             50000.0   85000.0   
+3    E06000004       Stockton-on-Tees  2000             55950.0   87950.0   
+4    E06000005             Darlington  2000             52000.0   94247.5   
+..         ...                    ...   ...                 ...       ...   
+527  E07000034           Chesterfield  2004            184995.0  250000.0   
+528  E07000035       Derbyshire Dales  2004            199950.0  271225.0   
+529  E07000036                Erewash  2004            204975.0  275000.0   
+530  E07000037              High Peak  2004            154500.0  237000.0   
+531  E07000038  North East Derbyshire  2004            158000.0  239450.0   
 
-[490 rows x 9 columns]</code></pre>
+     Semi-detached  Terraced     Flats  Detached_trend  Semi-detached_trend  \
+0          52500.0   25000.0   31475.0       -202005.0            -129500.0   
+1          52500.0   24000.0   33500.0        -39525.0             -20000.0   
+2          52000.0   33000.0   34000.0       -158250.0            -104235.5   
+3          49950.0   32000.0   31000.0       -139050.0             -83000.0   
+4          54000.0   31000.0   59995.0        -64502.5             -61000.0   
+..             ...       ...       ...             ...                  ...   
+527       174000.0  148000.0  103500.0         64025.0              48000.0   
+528       191000.0  165000.0  140000.0         36225.0              53900.5   
+529       200000.0  169725.0  130475.0         25000.0              21750.0   
+530       170000.0  140000.0  115000.0        -13000.0              -3000.0   
+531       170000.0  150000.0  132475.0          6950.0              15252.5   
+
+     Terraced_trend  Flats_trend  
+0         -146500.0    -128497.5  
+1          -34500.0     -61000.0  
+2          -94500.0     -58000.0  
+3          -75000.0     -93725.0  
+4          -64000.0      -5255.0  
+..              ...          ...  
+527         45000.0       5300.0  
+528         49500.0      57000.0  
+529         -4975.0       1725.0  
+530         -9950.0     -21750.0  
+531         24000.0      57475.0  
+
+[532 rows x 12 columns]
+Index([&#39;Code&#39;, &#39;LA_Name&#39;, &#39;Year&#39;, &#39;All_dwelling_types&#39;, &#39;Detached&#39;,
+       &#39;Semi-detached&#39;, &#39;Terraced&#39;, &#39;Flats&#39;, &#39;Detached_trend&#39;,
+       &#39;Semi-detached_trend&#39;, &#39;Terraced_trend&#39;, &#39;Flats_trend&#39;],
+      dtype=&#39;object&#39;)
+Index([&#39;Detached&#39;, &#39;Semi-detached&#39;, &#39;Terraced&#39;, &#39;Flats&#39;, &#39;Detached_trend&#39;,
+       &#39;Semi-detached_trend&#39;, &#39;Terraced_trend&#39;, &#39;Flats_trend&#39;],
+      dtype=&#39;object&#39;)</code></pre>
 </div>
 </div>
 <ol start="2" type="1">
@@ -2749,10 +2776,10 @@ Not a monotonic sequence!</code></pre>
 <div class="cell" data-execution_count="2">
 <details>
 <summary>Show code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Assumption: Current trends in price will continue.</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Quality: RED</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Impact: AMBER</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Detailed description: We assume that the median sale price of each dwelling type in a local authority in time &#39;t&#39; should be less than time &#39;t+1&#39;.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Assumption: Current trends in price will continue.</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Quality: RED</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Impact: AMBER</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Detailed description: We assume that the median sale price of each dwelling type in a local authority in time &#39;t&#39; should be less than time &#39;t+1&#39;.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <ol start="3" type="1">
@@ -2761,10 +2788,10 @@ Not a monotonic sequence!</code></pre>
 <div class="cell" data-execution_count="3">
 <details>
 <summary>Show code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Assumption: There is no change in house prices by local authority.</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Quality: RED</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Impact: AMBER</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Detailed description: We assume that there is no regional variation in house prices. </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Assumption: There is no change in house prices by local authority.</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Quality: RED</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Impact: AMBER</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Detailed description: We assume that there is no regional variation in house prices. </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>

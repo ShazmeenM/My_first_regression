@@ -185,3 +185,35 @@ housing_sale_price['new'] = housing_sale_price.groupby(['LA_Name'])['Year', 'Det
                       np.where(x.diff()<0,'decrease','--')))
 
 print(housing_sale_price)
+
+
+# Using Series.values.tolist()
+col_list = grouped_df["Detached"].values.tolist()
+print(col_list)
+
+# function testing the order of list
+def test(col_list):
+    return "Increasing." if all(col_list[i] < col_list[i + 1] for i in range(len(col_list) - 1)) else \
+        "Decreasing." if all(col_list[i + 1] < col_list[i] for i in range(len(col_list) - 1)) else \
+        "Not a monotonic sequence!"
+print(test(col_list))
+
+
+# grouping rows (LA_Name) by columns (Year) for each column separately
+group = housing_sale_price.groupby(['LA_Name', 'Year'])[['Detached', 'Semi-detached', 'Terraced', 'Flats']].first()
+print(group)
+#group_semi-detached = housing_sale_price.groupby(['LA_Name', 'Year'])['Semi-detached'].first()
+#group_terraced = housing_sale_price.groupby(['LA_Name', 'Year'])['Terraced'].first()
+#group_flats = housing_sale_price.groupby(['LA_Name', 'Year'])['Flats'].first()
+
+# incomplete try
+housing_sale_price['value_diff'] = housing_sale_price.groupby('LA_Name', 'Year').value.diff()
+housing_sale_price.groupby('LA_Name', 'Year').housing_sale_price['Detached'].diff()
+
+
+# Filter all rows for which the year is less than 2001
+#group_filtered = group[group['Year'] < 2001]
+ 
+# Print the new dataframe
+#print(group_filtered)
+ 
