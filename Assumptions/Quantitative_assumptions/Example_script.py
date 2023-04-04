@@ -22,12 +22,24 @@ print(housing_sale_price_neg)
 # Impact: AMBER
 # Detailed description: We assume that the median sale price of each dwelling type in a local authority in time 't' should be less than time 't+1'.
 
+
 # function testing the above assumption. It will return true if the assumptions holds and false otherwise.
-housing_sale_price
-group = housing_sale_price.groupby('LA_Name')
-group.first()
 
+# grouping rows (LA_Name) by columns (Year)
+group = housing_sale_price.groupby(['LA_Name', 'Year'], as_index=False)[['Detached', 'Semi-detached', 'Terraced', 'Flats']].first()
 
+# computing row differences across groups
+group['Detached_trend'] = group['Detached'].diff()
+group['Semi-detached_trend'] = group['Semi-detached'].diff()
+group['Terraced_trend'] = group['Terraced'].diff()
+group['Flats_trend'] = group['Flats'].diff()
+
+# Using drop() to delete rows in which Year < 2001
+group.drop(group[group['Year'] < 2001].index, inplace = True)
+
+# printing location of failures
+house_price_trend_neg = group[(group['Detached_trend']<0) | (group['Semi-detached_trend']<0) | (group['Terraced_trend']<0) | (group['Flats_trend']<0)]
+print(house_price_trend_neg)
 
 # Assumption: There is no change in house prices by local authority.
 # Quality: RED

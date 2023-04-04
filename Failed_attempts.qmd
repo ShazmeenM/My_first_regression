@@ -217,3 +217,48 @@ housing_sale_price.groupby('LA_Name', 'Year').housing_sale_price['Detached'].dif
 # Print the new dataframe
 #print(group_filtered)
  
+
+for p in set(group['Detached']):
+    max = group.loc[group['Detached'] == p,'London']
+    min = df.loc[df['product'] == p,'value2']
+    if  max_ > min_:
+        value_1 = df.loc[(df['product']== p) & (df['value1'] == max_),'client'] #getting the client(s) of the maximum value1
+        value_2 = df.loc[(df['product']== p) & (df['value2'] == min_),'client'] #getting the client(s) of the maximum value2
+        #commenting according to each name
+
+
+if x > group['LA_Name'] == 'London':
+
+
+for x in group['Detached']:
+  for y in group['LA_Name']:
+    if x > "London":
+       continue
+    print(y)
+
+for x in range(df.shape[0]):
+    for y in range(df.shape[1]):
+        if df.iloc[x, y] == 1:
+            print(f'Row: {x}, Col: {df.columns[y]}')
+
+for x in range(len(df)):
+  for y in range(len(df)):
+    df.iloc[:,:]    
+
+housing_sale_price_regions.loc['Detached', 'London']
+
+group['Price'] = [0 if x =='London' else 800 for x in df['LA_Name']]
+
+n = group[group['LA_Name'].isin(['London']) ]
+y = group
+for i, value in enumerate(n):
+    if i > y:
+        print(y)
+
+
+n = group[group['LA_Name'].isin(['London']) ]
+y = group[-group['LA_Name'].isin(['London']) ]
+for i, value in enumerate(n):
+  for p, value in enumerate(y):
+    if i > p:
+        print (p)

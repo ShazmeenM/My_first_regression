@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Shazmeen Maroof">
-<meta name="dcterms.date" content="2023-03-30">
+<meta name="dcterms.date" content="2023-04-04">
 
 <title>Example Model</title>
 <style>
@@ -2626,7 +2626,7 @@ vertical-align: -.125em;
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 30, 2023</p>
+      <p class="date">April 4, 2023</p>
     </div>
   </div>
   
@@ -2668,107 +2668,8 @@ vertical-align: -.125em;
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Assumption: House price should always be a positive number.</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Quality: RED</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Impact: AMBER</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Detailed description: We assume that no house is sold for a negative amount or for no value.</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>housing_sale_price <span class="op">=</span> pd.read_excel(<span class="st">&quot;D:</span><span class="ch">\\</span><span class="st">git_demo</span><span class="ch">\\</span><span class="st">Data/Housing_data.xlsx&quot;</span>, sheet_name<span class="op">=</span><span class="st">&quot;median_sale_price&quot;</span>)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># grouping rows (LA_Name) by columns (Year)</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>group <span class="op">=</span> housing_sale_price.groupby([<span class="st">&#39;LA_Name&#39;</span>, <span class="st">&#39;Year&#39;</span>])[[<span class="st">&#39;Detached&#39;</span>, <span class="st">&#39;Semi-detached&#39;</span>, <span class="st">&#39;Terraced&#39;</span>, <span class="st">&#39;Flats&#39;</span>]].first()</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># computing row differences across groups</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>group[<span class="st">&#39;Detached_trend&#39;</span>] <span class="op">=</span> group[<span class="st">&#39;Detached&#39;</span>].diff()</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>group[<span class="st">&#39;Semi-detached_trend&#39;</span>] <span class="op">=</span> group[<span class="st">&#39;Semi-detached&#39;</span>].diff()</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>group[<span class="st">&#39;Terraced_trend&#39;</span>] <span class="op">=</span> group[<span class="st">&#39;Terraced&#39;</span>].diff()</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>group[<span class="st">&#39;Flats_trend&#39;</span>] <span class="op">=</span> group[<span class="st">&#39;Flats&#39;</span>].diff()</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>df3 <span class="op">=</span> pd.merge(housing_sale_price, group, how <span class="op">=</span> <span class="st">&quot;right&quot;</span>)</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(group)</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (df3)</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df3.columns)</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># delete rows based on the condition of a column</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(group.columns)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Detailed description: We assume that no house is sold for a negative amount or for no value.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-stdout">
-<pre><code>                Detached  Semi-detached  Terraced     Flats  Detached_trend  \
-LA_Name   Year                                                                
-Allerdale 2000   91000.0        54000.0   36750.0   48000.0             NaN   
-          2001  123675.0        74000.0   58500.0   49000.0         32675.0   
-          2002  124200.0        59950.0   44995.0   62225.0           525.0   
-          2003  143500.0        83000.0   63025.0   56750.0         19300.0   
-          2004  238000.0       159975.0  131475.0  100000.0         94500.0   
-...                  ...            ...       ...       ...             ...   
-York      2000  113500.0        72500.0   62950.0   68861.5        -61500.0   
-          2001   95000.0        55000.0   37500.0   90000.0        -18500.0   
-          2002  237000.0       138000.0  131375.0  135000.0        142000.0   
-          2003  195000.0       119950.0   93500.0   64000.0        -42000.0   
-          2004  215000.0       149725.0  120000.0  115997.5         20000.0   
-
-                Semi-detached_trend  Terraced_trend  Flats_trend  
-LA_Name   Year                                                    
-Allerdale 2000                  NaN             NaN          NaN  
-          2001              20000.0         21750.0       1000.0  
-          2002             -14050.0        -13505.0      13225.0  
-          2003              23050.0         18030.0      -5475.0  
-          2004              76975.0         68450.0      43250.0  
-...                             ...             ...          ...  
-York      2000             -37500.0        -20775.0      -6138.5  
-          2001             -17500.0        -25450.0      21138.5  
-          2002              83000.0         93875.0      45000.0  
-          2003             -18050.0        -37875.0     -71000.0  
-          2004              29775.0         26500.0      51997.5  
-
-[490 rows x 8 columns]
-          Code                LA_Name  Year  All_dwelling_types  Detached  \
-0    E06000001             Hartlepool  2000             47000.0   87995.0   
-1    E06000002          Middlesbrough  2000             45000.0   89475.0   
-2    E06000003   Redcar and Cleveland  2000             50000.0   85000.0   
-3    E06000004       Stockton-on-Tees  2000             55950.0   87950.0   
-4    E06000005             Darlington  2000             52000.0   94247.5   
-..         ...                    ...   ...                 ...       ...   
-527  E07000034           Chesterfield  2004            184995.0  250000.0   
-528  E07000035       Derbyshire Dales  2004            199950.0  271225.0   
-529  E07000036                Erewash  2004            204975.0  275000.0   
-530  E07000037              High Peak  2004            154500.0  237000.0   
-531  E07000038  North East Derbyshire  2004            158000.0  239450.0   
-
-     Semi-detached  Terraced     Flats  Detached_trend  Semi-detached_trend  \
-0          52500.0   25000.0   31475.0       -202005.0            -129500.0   
-1          52500.0   24000.0   33500.0        -39525.0             -20000.0   
-2          52000.0   33000.0   34000.0       -158250.0            -104235.5   
-3          49950.0   32000.0   31000.0       -139050.0             -83000.0   
-4          54000.0   31000.0   59995.0        -64502.5             -61000.0   
-..             ...       ...       ...             ...                  ...   
-527       174000.0  148000.0  103500.0         64025.0              48000.0   
-528       191000.0  165000.0  140000.0         36225.0              53900.5   
-529       200000.0  169725.0  130475.0         25000.0              21750.0   
-530       170000.0  140000.0  115000.0        -13000.0              -3000.0   
-531       170000.0  150000.0  132475.0          6950.0              15252.5   
-
-     Terraced_trend  Flats_trend  
-0         -146500.0    -128497.5  
-1          -34500.0     -61000.0  
-2          -94500.0     -58000.0  
-3          -75000.0     -93725.0  
-4          -64000.0      -5255.0  
-..              ...          ...  
-527         45000.0       5300.0  
-528         49500.0      57000.0  
-529         -4975.0       1725.0  
-530         -9950.0     -21750.0  
-531         24000.0      57475.0  
-
-[532 rows x 12 columns]
-Index([&#39;Code&#39;, &#39;LA_Name&#39;, &#39;Year&#39;, &#39;All_dwelling_types&#39;, &#39;Detached&#39;,
-       &#39;Semi-detached&#39;, &#39;Terraced&#39;, &#39;Flats&#39;, &#39;Detached_trend&#39;,
-       &#39;Semi-detached_trend&#39;, &#39;Terraced_trend&#39;, &#39;Flats_trend&#39;],
-      dtype=&#39;object&#39;)
-Index([&#39;Detached&#39;, &#39;Semi-detached&#39;, &#39;Terraced&#39;, &#39;Flats&#39;, &#39;Detached_trend&#39;,
-       &#39;Semi-detached_trend&#39;, &#39;Terraced_trend&#39;, &#39;Flats_trend&#39;],
-      dtype=&#39;object&#39;)</code></pre>
-</div>
 </div>
 <ol start="2" type="1">
 <li>Current trends in price will continue.</li>
@@ -2776,10 +2677,10 @@ Index([&#39;Detached&#39;, &#39;Semi-detached&#39;, &#39;Terraced&#39;, &#39;Fla
 <div class="cell" data-execution_count="2">
 <details>
 <summary>Show code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Assumption: Current trends in price will continue.</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Quality: RED</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Impact: AMBER</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Detailed description: We assume that the median sale price of each dwelling type in a local authority in time &#39;t&#39; should be less than time &#39;t+1&#39;.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Assumption: Current trends in price will continue.</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Quality: RED</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Impact: AMBER</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Detailed description: We assume that the median sale price of each dwelling type in a local authority in time &#39;t&#39; should be less than time &#39;t+1&#39;.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <ol start="3" type="1">
@@ -2788,11 +2689,733 @@ Index([&#39;Detached&#39;, &#39;Semi-detached&#39;, &#39;Terraced&#39;, &#39;Fla
 <div class="cell" data-execution_count="3">
 <details>
 <summary>Show code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Assumption: There is no change in house prices by local authority.</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Quality: RED</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Impact: AMBER</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Detailed description: We assume that there is no regional variation in house prices. </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Assumption: There is regional variation in house prices.</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Quality: RED</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Impact: AMBER</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Detailed description: Median house prices of all dwelling types in London exceeds median house prices for every other region in England and Wales each year. </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
+</div>
+<div class="cell" data-execution_count="4">
+<details>
+<summary>Show code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>housing_sale_price_regions <span class="op">=</span> pd.read_excel(<span class="st">&quot;D:</span><span class="ch">\\</span><span class="st">git_demo</span><span class="ch">\\</span><span class="st">Data/Housing_data.xlsx&quot;</span>, sheet_name<span class="op">=</span><span class="st">&quot;median_sale_price_regions&quot;</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># grouping rows (LA_Name) by columns (Year)</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>group <span class="op">=</span> housing_sale_price_regions.groupby([<span class="st">&#39;LA_Name&#39;</span>, <span class="st">&#39;Year&#39;</span>], as_index<span class="op">=</span><span class="va">False</span>)[[<span class="st">&#39;Detached&#39;</span>, <span class="st">&#39;Semi-detached&#39;</span>, <span class="st">&#39;Terraced&#39;</span>, <span class="st">&#39;Flats&#39;</span>]].first()</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co">#print(group)</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Using DataFrame.query() method extract column values.</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>df2<span class="op">=</span>group[group[<span class="st">&#39;LA_Name&#39;</span>] <span class="op">==</span> <span class="st">&#39;London&#39;</span>][<span class="st">&#39;Detached&#39;</span>] <span class="op">&lt;</span> group[group[<span class="st">&#39;LA_Name&#39;</span>] <span class="op">==</span> <span class="st">&#39;Wales&#39;</span>]</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co">#print(df2)</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> group[group[<span class="st">&#39;LA_Name&#39;</span>].isin([<span class="st">&#39;London&#39;</span>]) ]</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co">#print(df)</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>df3 <span class="op">=</span> group[<span class="op">-</span>group[<span class="st">&#39;LA_Name&#39;</span>].isin([<span class="st">&#39;London&#39;</span>]) ]</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="co">#print(df3)</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>LA_lon <span class="op">=</span> group[group[<span class="st">&#39;LA_Name&#39;</span>].isin([<span class="st">&#39;London&#39;</span>]) ]</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>LA <span class="op">=</span> group[<span class="op">-</span>group[<span class="st">&#39;LA_Name&#39;</span>].isin([<span class="st">&#39;London&#39;</span>]) ]</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> LA_lon:</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> p <span class="kw">in</span> LA:</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">&lt;</span> p:</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span> (LA)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>                     LA_Name  Year  Detached  Semi-detached  Terraced   Flats
+0              East Midlands  2000   97000.0        55500.0     42950   43000
+1              East Midlands  2001  112500.0        62000.0     48000   52000
+2              East Midlands  2002  135000.0        77000.0     59995   66000
+3              East Midlands  2003  167000.0        97000.0     78000   87000
+4              East Midlands  2004  187000.0       118000.0     94000  102000
+5            East of England  2000  140000.0        85325.0     72000   59950
+6            East of England  2001  155000.0        99995.0     82995   67000
+7            East of England  2002  185000.0       125000.0    104000   85950
+8            East of England  2003  215000.0       148000.0    126000  105000
+9            East of England  2004  235000.0       165000.0    142000  120000
+15                North East  2000   92500.0        54000.0     36000   36000
+16                North East  2001   99950.0        57500.0     37500   39000
+17                North East  2002  121950.0        66000.0     41950   47000
+18                North East  2003  155000.0        85000.0     53000   63500
+19                North East  2004  183500.0       110000.0     70000   82000
+20                North West  2000  109000.0        59500.0     36050   53975
+21                North West  2001  119995.0        65000.0     38500   60000
+22                North West  2002  140000.0        76950.0     43000   78950
+23                North West  2003  170950.0        94950.0     55000   93100
+24                North West  2004  200500.0       122000.0     72500  114000
+25                South East  2000  193000.0       117751.5     89950   72500
+26                South East  2001  216500.0       130000.0    102500   84500
+27                South East  2002  248000.0       153500.0    125000  104000
+28                South East  2003  279950.0       177500.0    144000  120000
+29                South East  2004  300000.0       192000.0    158500  134950
+30                South West  2000  137000.0        83100.0     68500   58950
+31                South West  2001  153000.0        94000.0     78000   69500
+32                South West  2002  185000.0       119000.0     97000   88000
+33                South West  2003  225000.0       141000.0    120000  108000
+34                South West  2004  247000.0       160000.0    137500  124950
+35                     Wales  2000   89500.0        54000.0     40000   49000
+36                     Wales  2001   97950.0        58000.0     43500   57000
+37                     Wales  2002  119950.0        67307.5     49950   69950
+38                     Wales  2003  146972.5        85000.0     63000   85000
+39                     Wales  2004  177000.0       111950.0     83000  110000
+40             West Midlands  2000  124000.0        65000.0     50000   47500
+41             West Midlands  2001  138000.0        73000.0     56000   57000
+42             West Midlands  2002  162500.0        86500.0     67500   69500
+43             West Midlands  2003  192450.0       108000.0     83500   88500
+44             West Midlands  2004  220000.0       127500.0    100000  105000
+45  Yorkshire and The Humber  2000   95000.0        54500.0     39000   52000
+46  Yorkshire and The Humber  2001  105000.0        58950.0     40000   59950
+47  Yorkshire and The Humber  2002  129000.0        69950.0     46000   75500
+48  Yorkshire and The Humber  2003  161726.0        89500.0     59950   94000
+49  Yorkshire and The Humber  2004  189950.0       115000.0     77000  115000
+                     LA_Name  Year  Detached  Semi-detached  Terraced   Flats
+0              East Midlands  2000   97000.0        55500.0     42950   43000
+1              East Midlands  2001  112500.0        62000.0     48000   52000
+2              East Midlands  2002  135000.0        77000.0     59995   66000
+3              East Midlands  2003  167000.0        97000.0     78000   87000
+4              East Midlands  2004  187000.0       118000.0     94000  102000
+5            East of England  2000  140000.0        85325.0     72000   59950
+6            East of England  2001  155000.0        99995.0     82995   67000
+7            East of England  2002  185000.0       125000.0    104000   85950
+8            East of England  2003  215000.0       148000.0    126000  105000
+9            East of England  2004  235000.0       165000.0    142000  120000
+15                North East  2000   92500.0        54000.0     36000   36000
+16                North East  2001   99950.0        57500.0     37500   39000
+17                North East  2002  121950.0        66000.0     41950   47000
+18                North East  2003  155000.0        85000.0     53000   63500
+19                North East  2004  183500.0       110000.0     70000   82000
+20                North West  2000  109000.0        59500.0     36050   53975
+21                North West  2001  119995.0        65000.0     38500   60000
+22                North West  2002  140000.0        76950.0     43000   78950
+23                North West  2003  170950.0        94950.0     55000   93100
+24                North West  2004  200500.0       122000.0     72500  114000
+25                South East  2000  193000.0       117751.5     89950   72500
+26                South East  2001  216500.0       130000.0    102500   84500
+27                South East  2002  248000.0       153500.0    125000  104000
+28                South East  2003  279950.0       177500.0    144000  120000
+29                South East  2004  300000.0       192000.0    158500  134950
+30                South West  2000  137000.0        83100.0     68500   58950
+31                South West  2001  153000.0        94000.0     78000   69500
+32                South West  2002  185000.0       119000.0     97000   88000
+33                South West  2003  225000.0       141000.0    120000  108000
+34                South West  2004  247000.0       160000.0    137500  124950
+35                     Wales  2000   89500.0        54000.0     40000   49000
+36                     Wales  2001   97950.0        58000.0     43500   57000
+37                     Wales  2002  119950.0        67307.5     49950   69950
+38                     Wales  2003  146972.5        85000.0     63000   85000
+39                     Wales  2004  177000.0       111950.0     83000  110000
+40             West Midlands  2000  124000.0        65000.0     50000   47500
+41             West Midlands  2001  138000.0        73000.0     56000   57000
+42             West Midlands  2002  162500.0        86500.0     67500   69500
+43             West Midlands  2003  192450.0       108000.0     83500   88500
+44             West Midlands  2004  220000.0       127500.0    100000  105000
+45  Yorkshire and The Humber  2000   95000.0        54500.0     39000   52000
+46  Yorkshire and The Humber  2001  105000.0        58950.0     40000   59950
+47  Yorkshire and The Humber  2002  129000.0        69950.0     46000   75500
+48  Yorkshire and The Humber  2003  161726.0        89500.0     59950   94000
+49  Yorkshire and The Humber  2004  189950.0       115000.0     77000  115000
+                     LA_Name  Year  Detached  Semi-detached  Terraced   Flats
+0              East Midlands  2000   97000.0        55500.0     42950   43000
+1              East Midlands  2001  112500.0        62000.0     48000   52000
+2              East Midlands  2002  135000.0        77000.0     59995   66000
+3              East Midlands  2003  167000.0        97000.0     78000   87000
+4              East Midlands  2004  187000.0       118000.0     94000  102000
+5            East of England  2000  140000.0        85325.0     72000   59950
+6            East of England  2001  155000.0        99995.0     82995   67000
+7            East of England  2002  185000.0       125000.0    104000   85950
+8            East of England  2003  215000.0       148000.0    126000  105000
+9            East of England  2004  235000.0       165000.0    142000  120000
+15                North East  2000   92500.0        54000.0     36000   36000
+16                North East  2001   99950.0        57500.0     37500   39000
+17                North East  2002  121950.0        66000.0     41950   47000
+18                North East  2003  155000.0        85000.0     53000   63500
+19                North East  2004  183500.0       110000.0     70000   82000
+20                North West  2000  109000.0        59500.0     36050   53975
+21                North West  2001  119995.0        65000.0     38500   60000
+22                North West  2002  140000.0        76950.0     43000   78950
+23                North West  2003  170950.0        94950.0     55000   93100
+24                North West  2004  200500.0       122000.0     72500  114000
+25                South East  2000  193000.0       117751.5     89950   72500
+26                South East  2001  216500.0       130000.0    102500   84500
+27                South East  2002  248000.0       153500.0    125000  104000
+28                South East  2003  279950.0       177500.0    144000  120000
+29                South East  2004  300000.0       192000.0    158500  134950
+30                South West  2000  137000.0        83100.0     68500   58950
+31                South West  2001  153000.0        94000.0     78000   69500
+32                South West  2002  185000.0       119000.0     97000   88000
+33                South West  2003  225000.0       141000.0    120000  108000
+34                South West  2004  247000.0       160000.0    137500  124950
+35                     Wales  2000   89500.0        54000.0     40000   49000
+36                     Wales  2001   97950.0        58000.0     43500   57000
+37                     Wales  2002  119950.0        67307.5     49950   69950
+38                     Wales  2003  146972.5        85000.0     63000   85000
+39                     Wales  2004  177000.0       111950.0     83000  110000
+40             West Midlands  2000  124000.0        65000.0     50000   47500
+41             West Midlands  2001  138000.0        73000.0     56000   57000
+42             West Midlands  2002  162500.0        86500.0     67500   69500
+43             West Midlands  2003  192450.0       108000.0     83500   88500
+44             West Midlands  2004  220000.0       127500.0    100000  105000
+45  Yorkshire and The Humber  2000   95000.0        54500.0     39000   52000
+46  Yorkshire and The Humber  2001  105000.0        58950.0     40000   59950
+47  Yorkshire and The Humber  2002  129000.0        69950.0     46000   75500
+48  Yorkshire and The Humber  2003  161726.0        89500.0     59950   94000
+49  Yorkshire and The Humber  2004  189950.0       115000.0     77000  115000
+                     LA_Name  Year  Detached  Semi-detached  Terraced   Flats
+0              East Midlands  2000   97000.0        55500.0     42950   43000
+1              East Midlands  2001  112500.0        62000.0     48000   52000
+2              East Midlands  2002  135000.0        77000.0     59995   66000
+3              East Midlands  2003  167000.0        97000.0     78000   87000
+4              East Midlands  2004  187000.0       118000.0     94000  102000
+5            East of England  2000  140000.0        85325.0     72000   59950
+6            East of England  2001  155000.0        99995.0     82995   67000
+7            East of England  2002  185000.0       125000.0    104000   85950
+8            East of England  2003  215000.0       148000.0    126000  105000
+9            East of England  2004  235000.0       165000.0    142000  120000
+15                North East  2000   92500.0        54000.0     36000   36000
+16                North East  2001   99950.0        57500.0     37500   39000
+17                North East  2002  121950.0        66000.0     41950   47000
+18                North East  2003  155000.0        85000.0     53000   63500
+19                North East  2004  183500.0       110000.0     70000   82000
+20                North West  2000  109000.0        59500.0     36050   53975
+21                North West  2001  119995.0        65000.0     38500   60000
+22                North West  2002  140000.0        76950.0     43000   78950
+23                North West  2003  170950.0        94950.0     55000   93100
+24                North West  2004  200500.0       122000.0     72500  114000
+25                South East  2000  193000.0       117751.5     89950   72500
+26                South East  2001  216500.0       130000.0    102500   84500
+27                South East  2002  248000.0       153500.0    125000  104000
+28                South East  2003  279950.0       177500.0    144000  120000
+29                South East  2004  300000.0       192000.0    158500  134950
+30                South West  2000  137000.0        83100.0     68500   58950
+31                South West  2001  153000.0        94000.0     78000   69500
+32                South West  2002  185000.0       119000.0     97000   88000
+33                South West  2003  225000.0       141000.0    120000  108000
+34                South West  2004  247000.0       160000.0    137500  124950
+35                     Wales  2000   89500.0        54000.0     40000   49000
+36                     Wales  2001   97950.0        58000.0     43500   57000
+37                     Wales  2002  119950.0        67307.5     49950   69950
+38                     Wales  2003  146972.5        85000.0     63000   85000
+39                     Wales  2004  177000.0       111950.0     83000  110000
+40             West Midlands  2000  124000.0        65000.0     50000   47500
+41             West Midlands  2001  138000.0        73000.0     56000   57000
+42             West Midlands  2002  162500.0        86500.0     67500   69500
+43             West Midlands  2003  192450.0       108000.0     83500   88500
+44             West Midlands  2004  220000.0       127500.0    100000  105000
+45  Yorkshire and The Humber  2000   95000.0        54500.0     39000   52000
+46  Yorkshire and The Humber  2001  105000.0        58950.0     40000   59950
+47  Yorkshire and The Humber  2002  129000.0        69950.0     46000   75500
+48  Yorkshire and The Humber  2003  161726.0        89500.0     59950   94000
+49  Yorkshire and The Humber  2004  189950.0       115000.0     77000  115000
+                     LA_Name  Year  Detached  Semi-detached  Terraced   Flats
+0              East Midlands  2000   97000.0        55500.0     42950   43000
+1              East Midlands  2001  112500.0        62000.0     48000   52000
+2              East Midlands  2002  135000.0        77000.0     59995   66000
+3              East Midlands  2003  167000.0        97000.0     78000   87000
+4              East Midlands  2004  187000.0       118000.0     94000  102000
+5            East of England  2000  140000.0        85325.0     72000   59950
+6            East of England  2001  155000.0        99995.0     82995   67000
+7            East of England  2002  185000.0       125000.0    104000   85950
+8            East of England  2003  215000.0       148000.0    126000  105000
+9            East of England  2004  235000.0       165000.0    142000  120000
+15                North East  2000   92500.0        54000.0     36000   36000
+16                North East  2001   99950.0        57500.0     37500   39000
+17                North East  2002  121950.0        66000.0     41950   47000
+18                North East  2003  155000.0        85000.0     53000   63500
+19                North East  2004  183500.0       110000.0     70000   82000
+20                North West  2000  109000.0        59500.0     36050   53975
+21                North West  2001  119995.0        65000.0     38500   60000
+22                North West  2002  140000.0        76950.0     43000   78950
+23                North West  2003  170950.0        94950.0     55000   93100
+24                North West  2004  200500.0       122000.0     72500  114000
+25                South East  2000  193000.0       117751.5     89950   72500
+26                South East  2001  216500.0       130000.0    102500   84500
+27                South East  2002  248000.0       153500.0    125000  104000
+28                South East  2003  279950.0       177500.0    144000  120000
+29                South East  2004  300000.0       192000.0    158500  134950
+30                South West  2000  137000.0        83100.0     68500   58950
+31                South West  2001  153000.0        94000.0     78000   69500
+32                South West  2002  185000.0       119000.0     97000   88000
+33                South West  2003  225000.0       141000.0    120000  108000
+34                South West  2004  247000.0       160000.0    137500  124950
+35                     Wales  2000   89500.0        54000.0     40000   49000
+36                     Wales  2001   97950.0        58000.0     43500   57000
+37                     Wales  2002  119950.0        67307.5     49950   69950
+38                     Wales  2003  146972.5        85000.0     63000   85000
+39                     Wales  2004  177000.0       111950.0     83000  110000
+40             West Midlands  2000  124000.0        65000.0     50000   47500
+41             West Midlands  2001  138000.0        73000.0     56000   57000
+42             West Midlands  2002  162500.0        86500.0     67500   69500
+43             West Midlands  2003  192450.0       108000.0     83500   88500
+44             West Midlands  2004  220000.0       127500.0    100000  105000
+45  Yorkshire and The Humber  2000   95000.0        54500.0     39000   52000
+46  Yorkshire and The Humber  2001  105000.0        58950.0     40000   59950
+47  Yorkshire and The Humber  2002  129000.0        69950.0     46000   75500
+48  Yorkshire and The Humber  2003  161726.0        89500.0     59950   94000
+49  Yorkshire and The Humber  2004  189950.0       115000.0     77000  115000
+                     LA_Name  Year  Detached  Semi-detached  Terraced   Flats
+0              East Midlands  2000   97000.0        55500.0     42950   43000
+1              East Midlands  2001  112500.0        62000.0     48000   52000
+2              East Midlands  2002  135000.0        77000.0     59995   66000
+3              East Midlands  2003  167000.0        97000.0     78000   87000
+4              East Midlands  2004  187000.0       118000.0     94000  102000
+5            East of England  2000  140000.0        85325.0     72000   59950
+6            East of England  2001  155000.0        99995.0     82995   67000
+7            East of England  2002  185000.0       125000.0    104000   85950
+8            East of England  2003  215000.0       148000.0    126000  105000
+9            East of England  2004  235000.0       165000.0    142000  120000
+15                North East  2000   92500.0        54000.0     36000   36000
+16                North East  2001   99950.0        57500.0     37500   39000
+17                North East  2002  121950.0        66000.0     41950   47000
+18                North East  2003  155000.0        85000.0     53000   63500
+19                North East  2004  183500.0       110000.0     70000   82000
+20                North West  2000  109000.0        59500.0     36050   53975
+21                North West  2001  119995.0        65000.0     38500   60000
+22                North West  2002  140000.0        76950.0     43000   78950
+23                North West  2003  170950.0        94950.0     55000   93100
+24                North West  2004  200500.0       122000.0     72500  114000
+25                South East  2000  193000.0       117751.5     89950   72500
+26                South East  2001  216500.0       130000.0    102500   84500
+27                South East  2002  248000.0       153500.0    125000  104000
+28                South East  2003  279950.0       177500.0    144000  120000
+29                South East  2004  300000.0       192000.0    158500  134950
+30                South West  2000  137000.0        83100.0     68500   58950
+31                South West  2001  153000.0        94000.0     78000   69500
+32                South West  2002  185000.0       119000.0     97000   88000
+33                South West  2003  225000.0       141000.0    120000  108000
+34                South West  2004  247000.0       160000.0    137500  124950
+35                     Wales  2000   89500.0        54000.0     40000   49000
+36                     Wales  2001   97950.0        58000.0     43500   57000
+37                     Wales  2002  119950.0        67307.5     49950   69950
+38                     Wales  2003  146972.5        85000.0     63000   85000
+39                     Wales  2004  177000.0       111950.0     83000  110000
+40             West Midlands  2000  124000.0        65000.0     50000   47500
+41             West Midlands  2001  138000.0        73000.0     56000   57000
+42             West Midlands  2002  162500.0        86500.0     67500   69500
+43             West Midlands  2003  192450.0       108000.0     83500   88500
+44             West Midlands  2004  220000.0       127500.0    100000  105000
+45  Yorkshire and The Humber  2000   95000.0        54500.0     39000   52000
+46  Yorkshire and The Humber  2001  105000.0        58950.0     40000   59950
+47  Yorkshire and The Humber  2002  129000.0        69950.0     46000   75500
+48  Yorkshire and The Humber  2003  161726.0        89500.0     59950   94000
+49  Yorkshire and The Humber  2004  189950.0       115000.0     77000  115000
+                     LA_Name  Year  Detached  Semi-detached  Terraced   Flats
+0              East Midlands  2000   97000.0        55500.0     42950   43000
+1              East Midlands  2001  112500.0        62000.0     48000   52000
+2              East Midlands  2002  135000.0        77000.0     59995   66000
+3              East Midlands  2003  167000.0        97000.0     78000   87000
+4              East Midlands  2004  187000.0       118000.0     94000  102000
+5            East of England  2000  140000.0        85325.0     72000   59950
+6            East of England  2001  155000.0        99995.0     82995   67000
+7            East of England  2002  185000.0       125000.0    104000   85950
+8            East of England  2003  215000.0       148000.0    126000  105000
+9            East of England  2004  235000.0       165000.0    142000  120000
+15                North East  2000   92500.0        54000.0     36000   36000
+16                North East  2001   99950.0        57500.0     37500   39000
+17                North East  2002  121950.0        66000.0     41950   47000
+18                North East  2003  155000.0        85000.0     53000   63500
+19                North East  2004  183500.0       110000.0     70000   82000
+20                North West  2000  109000.0        59500.0     36050   53975
+21                North West  2001  119995.0        65000.0     38500   60000
+22                North West  2002  140000.0        76950.0     43000   78950
+23                North West  2003  170950.0        94950.0     55000   93100
+24                North West  2004  200500.0       122000.0     72500  114000
+25                South East  2000  193000.0       117751.5     89950   72500
+26                South East  2001  216500.0       130000.0    102500   84500
+27                South East  2002  248000.0       153500.0    125000  104000
+28                South East  2003  279950.0       177500.0    144000  120000
+29                South East  2004  300000.0       192000.0    158500  134950
+30                South West  2000  137000.0        83100.0     68500   58950
+31                South West  2001  153000.0        94000.0     78000   69500
+32                South West  2002  185000.0       119000.0     97000   88000
+33                South West  2003  225000.0       141000.0    120000  108000
+34                South West  2004  247000.0       160000.0    137500  124950
+35                     Wales  2000   89500.0        54000.0     40000   49000
+36                     Wales  2001   97950.0        58000.0     43500   57000
+37                     Wales  2002  119950.0        67307.5     49950   69950
+38                     Wales  2003  146972.5        85000.0     63000   85000
+39                     Wales  2004  177000.0       111950.0     83000  110000
+40             West Midlands  2000  124000.0        65000.0     50000   47500
+41             West Midlands  2001  138000.0        73000.0     56000   57000
+42             West Midlands  2002  162500.0        86500.0     67500   69500
+43             West Midlands  2003  192450.0       108000.0     83500   88500
+44             West Midlands  2004  220000.0       127500.0    100000  105000
+45  Yorkshire and The Humber  2000   95000.0        54500.0     39000   52000
+46  Yorkshire and The Humber  2001  105000.0        58950.0     40000   59950
+47  Yorkshire and The Humber  2002  129000.0        69950.0     46000   75500
+48  Yorkshire and The Humber  2003  161726.0        89500.0     59950   94000
+49  Yorkshire and The Humber  2004  189950.0       115000.0     77000  115000
+                     LA_Name  Year  Detached  Semi-detached  Terraced   Flats
+0              East Midlands  2000   97000.0        55500.0     42950   43000
+1              East Midlands  2001  112500.0        62000.0     48000   52000
+2              East Midlands  2002  135000.0        77000.0     59995   66000
+3              East Midlands  2003  167000.0        97000.0     78000   87000
+4              East Midlands  2004  187000.0       118000.0     94000  102000
+5            East of England  2000  140000.0        85325.0     72000   59950
+6            East of England  2001  155000.0        99995.0     82995   67000
+7            East of England  2002  185000.0       125000.0    104000   85950
+8            East of England  2003  215000.0       148000.0    126000  105000
+9            East of England  2004  235000.0       165000.0    142000  120000
+15                North East  2000   92500.0        54000.0     36000   36000
+16                North East  2001   99950.0        57500.0     37500   39000
+17                North East  2002  121950.0        66000.0     41950   47000
+18                North East  2003  155000.0        85000.0     53000   63500
+19                North East  2004  183500.0       110000.0     70000   82000
+20                North West  2000  109000.0        59500.0     36050   53975
+21                North West  2001  119995.0        65000.0     38500   60000
+22                North West  2002  140000.0        76950.0     43000   78950
+23                North West  2003  170950.0        94950.0     55000   93100
+24                North West  2004  200500.0       122000.0     72500  114000
+25                South East  2000  193000.0       117751.5     89950   72500
+26                South East  2001  216500.0       130000.0    102500   84500
+27                South East  2002  248000.0       153500.0    125000  104000
+28                South East  2003  279950.0       177500.0    144000  120000
+29                South East  2004  300000.0       192000.0    158500  134950
+30                South West  2000  137000.0        83100.0     68500   58950
+31                South West  2001  153000.0        94000.0     78000   69500
+32                South West  2002  185000.0       119000.0     97000   88000
+33                South West  2003  225000.0       141000.0    120000  108000
+34                South West  2004  247000.0       160000.0    137500  124950
+35                     Wales  2000   89500.0        54000.0     40000   49000
+36                     Wales  2001   97950.0        58000.0     43500   57000
+37                     Wales  2002  119950.0        67307.5     49950   69950
+38                     Wales  2003  146972.5        85000.0     63000   85000
+39                     Wales  2004  177000.0       111950.0     83000  110000
+40             West Midlands  2000  124000.0        65000.0     50000   47500
+41             West Midlands  2001  138000.0        73000.0     56000   57000
+42             West Midlands  2002  162500.0        86500.0     67500   69500
+43             West Midlands  2003  192450.0       108000.0     83500   88500
+44             West Midlands  2004  220000.0       127500.0    100000  105000
+45  Yorkshire and The Humber  2000   95000.0        54500.0     39000   52000
+46  Yorkshire and The Humber  2001  105000.0        58950.0     40000   59950
+47  Yorkshire and The Humber  2002  129000.0        69950.0     46000   75500
+48  Yorkshire and The Humber  2003  161726.0        89500.0     59950   94000
+49  Yorkshire and The Humber  2004  189950.0       115000.0     77000  115000
+                     LA_Name  Year  Detached  Semi-detached  Terraced   Flats
+0              East Midlands  2000   97000.0        55500.0     42950   43000
+1              East Midlands  2001  112500.0        62000.0     48000   52000
+2              East Midlands  2002  135000.0        77000.0     59995   66000
+3              East Midlands  2003  167000.0        97000.0     78000   87000
+4              East Midlands  2004  187000.0       118000.0     94000  102000
+5            East of England  2000  140000.0        85325.0     72000   59950
+6            East of England  2001  155000.0        99995.0     82995   67000
+7            East of England  2002  185000.0       125000.0    104000   85950
+8            East of England  2003  215000.0       148000.0    126000  105000
+9            East of England  2004  235000.0       165000.0    142000  120000
+15                North East  2000   92500.0        54000.0     36000   36000
+16                North East  2001   99950.0        57500.0     37500   39000
+17                North East  2002  121950.0        66000.0     41950   47000
+18                North East  2003  155000.0        85000.0     53000   63500
+19                North East  2004  183500.0       110000.0     70000   82000
+20                North West  2000  109000.0        59500.0     36050   53975
+21                North West  2001  119995.0        65000.0     38500   60000
+22                North West  2002  140000.0        76950.0     43000   78950
+23                North West  2003  170950.0        94950.0     55000   93100
+24                North West  2004  200500.0       122000.0     72500  114000
+25                South East  2000  193000.0       117751.5     89950   72500
+26                South East  2001  216500.0       130000.0    102500   84500
+27                South East  2002  248000.0       153500.0    125000  104000
+28                South East  2003  279950.0       177500.0    144000  120000
+29                South East  2004  300000.0       192000.0    158500  134950
+30                South West  2000  137000.0        83100.0     68500   58950
+31                South West  2001  153000.0        94000.0     78000   69500
+32                South West  2002  185000.0       119000.0     97000   88000
+33                South West  2003  225000.0       141000.0    120000  108000
+34                South West  2004  247000.0       160000.0    137500  124950
+35                     Wales  2000   89500.0        54000.0     40000   49000
+36                     Wales  2001   97950.0        58000.0     43500   57000
+37                     Wales  2002  119950.0        67307.5     49950   69950
+38                     Wales  2003  146972.5        85000.0     63000   85000
+39                     Wales  2004  177000.0       111950.0     83000  110000
+40             West Midlands  2000  124000.0        65000.0     50000   47500
+41             West Midlands  2001  138000.0        73000.0     56000   57000
+42             West Midlands  2002  162500.0        86500.0     67500   69500
+43             West Midlands  2003  192450.0       108000.0     83500   88500
+44             West Midlands  2004  220000.0       127500.0    100000  105000
+45  Yorkshire and The Humber  2000   95000.0        54500.0     39000   52000
+46  Yorkshire and The Humber  2001  105000.0        58950.0     40000   59950
+47  Yorkshire and The Humber  2002  129000.0        69950.0     46000   75500
+48  Yorkshire and The Humber  2003  161726.0        89500.0     59950   94000
+49  Yorkshire and The Humber  2004  189950.0       115000.0     77000  115000
+                     LA_Name  Year  Detached  Semi-detached  Terraced   Flats
+0              East Midlands  2000   97000.0        55500.0     42950   43000
+1              East Midlands  2001  112500.0        62000.0     48000   52000
+2              East Midlands  2002  135000.0        77000.0     59995   66000
+3              East Midlands  2003  167000.0        97000.0     78000   87000
+4              East Midlands  2004  187000.0       118000.0     94000  102000
+5            East of England  2000  140000.0        85325.0     72000   59950
+6            East of England  2001  155000.0        99995.0     82995   67000
+7            East of England  2002  185000.0       125000.0    104000   85950
+8            East of England  2003  215000.0       148000.0    126000  105000
+9            East of England  2004  235000.0       165000.0    142000  120000
+15                North East  2000   92500.0        54000.0     36000   36000
+16                North East  2001   99950.0        57500.0     37500   39000
+17                North East  2002  121950.0        66000.0     41950   47000
+18                North East  2003  155000.0        85000.0     53000   63500
+19                North East  2004  183500.0       110000.0     70000   82000
+20                North West  2000  109000.0        59500.0     36050   53975
+21                North West  2001  119995.0        65000.0     38500   60000
+22                North West  2002  140000.0        76950.0     43000   78950
+23                North West  2003  170950.0        94950.0     55000   93100
+24                North West  2004  200500.0       122000.0     72500  114000
+25                South East  2000  193000.0       117751.5     89950   72500
+26                South East  2001  216500.0       130000.0    102500   84500
+27                South East  2002  248000.0       153500.0    125000  104000
+28                South East  2003  279950.0       177500.0    144000  120000
+29                South East  2004  300000.0       192000.0    158500  134950
+30                South West  2000  137000.0        83100.0     68500   58950
+31                South West  2001  153000.0        94000.0     78000   69500
+32                South West  2002  185000.0       119000.0     97000   88000
+33                South West  2003  225000.0       141000.0    120000  108000
+34                South West  2004  247000.0       160000.0    137500  124950
+35                     Wales  2000   89500.0        54000.0     40000   49000
+36                     Wales  2001   97950.0        58000.0     43500   57000
+37                     Wales  2002  119950.0        67307.5     49950   69950
+38                     Wales  2003  146972.5        85000.0     63000   85000
+39                     Wales  2004  177000.0       111950.0     83000  110000
+40             West Midlands  2000  124000.0        65000.0     50000   47500
+41             West Midlands  2001  138000.0        73000.0     56000   57000
+42             West Midlands  2002  162500.0        86500.0     67500   69500
+43             West Midlands  2003  192450.0       108000.0     83500   88500
+44             West Midlands  2004  220000.0       127500.0    100000  105000
+45  Yorkshire and The Humber  2000   95000.0        54500.0     39000   52000
+46  Yorkshire and The Humber  2001  105000.0        58950.0     40000   59950
+47  Yorkshire and The Humber  2002  129000.0        69950.0     46000   75500
+48  Yorkshire and The Humber  2003  161726.0        89500.0     59950   94000
+49  Yorkshire and The Humber  2004  189950.0       115000.0     77000  115000
+                     LA_Name  Year  Detached  Semi-detached  Terraced   Flats
+0              East Midlands  2000   97000.0        55500.0     42950   43000
+1              East Midlands  2001  112500.0        62000.0     48000   52000
+2              East Midlands  2002  135000.0        77000.0     59995   66000
+3              East Midlands  2003  167000.0        97000.0     78000   87000
+4              East Midlands  2004  187000.0       118000.0     94000  102000
+5            East of England  2000  140000.0        85325.0     72000   59950
+6            East of England  2001  155000.0        99995.0     82995   67000
+7            East of England  2002  185000.0       125000.0    104000   85950
+8            East of England  2003  215000.0       148000.0    126000  105000
+9            East of England  2004  235000.0       165000.0    142000  120000
+15                North East  2000   92500.0        54000.0     36000   36000
+16                North East  2001   99950.0        57500.0     37500   39000
+17                North East  2002  121950.0        66000.0     41950   47000
+18                North East  2003  155000.0        85000.0     53000   63500
+19                North East  2004  183500.0       110000.0     70000   82000
+20                North West  2000  109000.0        59500.0     36050   53975
+21                North West  2001  119995.0        65000.0     38500   60000
+22                North West  2002  140000.0        76950.0     43000   78950
+23                North West  2003  170950.0        94950.0     55000   93100
+24                North West  2004  200500.0       122000.0     72500  114000
+25                South East  2000  193000.0       117751.5     89950   72500
+26                South East  2001  216500.0       130000.0    102500   84500
+27                South East  2002  248000.0       153500.0    125000  104000
+28                South East  2003  279950.0       177500.0    144000  120000
+29                South East  2004  300000.0       192000.0    158500  134950
+30                South West  2000  137000.0        83100.0     68500   58950
+31                South West  2001  153000.0        94000.0     78000   69500
+32                South West  2002  185000.0       119000.0     97000   88000
+33                South West  2003  225000.0       141000.0    120000  108000
+34                South West  2004  247000.0       160000.0    137500  124950
+35                     Wales  2000   89500.0        54000.0     40000   49000
+36                     Wales  2001   97950.0        58000.0     43500   57000
+37                     Wales  2002  119950.0        67307.5     49950   69950
+38                     Wales  2003  146972.5        85000.0     63000   85000
+39                     Wales  2004  177000.0       111950.0     83000  110000
+40             West Midlands  2000  124000.0        65000.0     50000   47500
+41             West Midlands  2001  138000.0        73000.0     56000   57000
+42             West Midlands  2002  162500.0        86500.0     67500   69500
+43             West Midlands  2003  192450.0       108000.0     83500   88500
+44             West Midlands  2004  220000.0       127500.0    100000  105000
+45  Yorkshire and The Humber  2000   95000.0        54500.0     39000   52000
+46  Yorkshire and The Humber  2001  105000.0        58950.0     40000   59950
+47  Yorkshire and The Humber  2002  129000.0        69950.0     46000   75500
+48  Yorkshire and The Humber  2003  161726.0        89500.0     59950   94000
+49  Yorkshire and The Humber  2004  189950.0       115000.0     77000  115000
+                     LA_Name  Year  Detached  Semi-detached  Terraced   Flats
+0              East Midlands  2000   97000.0        55500.0     42950   43000
+1              East Midlands  2001  112500.0        62000.0     48000   52000
+2              East Midlands  2002  135000.0        77000.0     59995   66000
+3              East Midlands  2003  167000.0        97000.0     78000   87000
+4              East Midlands  2004  187000.0       118000.0     94000  102000
+5            East of England  2000  140000.0        85325.0     72000   59950
+6            East of England  2001  155000.0        99995.0     82995   67000
+7            East of England  2002  185000.0       125000.0    104000   85950
+8            East of England  2003  215000.0       148000.0    126000  105000
+9            East of England  2004  235000.0       165000.0    142000  120000
+15                North East  2000   92500.0        54000.0     36000   36000
+16                North East  2001   99950.0        57500.0     37500   39000
+17                North East  2002  121950.0        66000.0     41950   47000
+18                North East  2003  155000.0        85000.0     53000   63500
+19                North East  2004  183500.0       110000.0     70000   82000
+20                North West  2000  109000.0        59500.0     36050   53975
+21                North West  2001  119995.0        65000.0     38500   60000
+22                North West  2002  140000.0        76950.0     43000   78950
+23                North West  2003  170950.0        94950.0     55000   93100
+24                North West  2004  200500.0       122000.0     72500  114000
+25                South East  2000  193000.0       117751.5     89950   72500
+26                South East  2001  216500.0       130000.0    102500   84500
+27                South East  2002  248000.0       153500.0    125000  104000
+28                South East  2003  279950.0       177500.0    144000  120000
+29                South East  2004  300000.0       192000.0    158500  134950
+30                South West  2000  137000.0        83100.0     68500   58950
+31                South West  2001  153000.0        94000.0     78000   69500
+32                South West  2002  185000.0       119000.0     97000   88000
+33                South West  2003  225000.0       141000.0    120000  108000
+34                South West  2004  247000.0       160000.0    137500  124950
+35                     Wales  2000   89500.0        54000.0     40000   49000
+36                     Wales  2001   97950.0        58000.0     43500   57000
+37                     Wales  2002  119950.0        67307.5     49950   69950
+38                     Wales  2003  146972.5        85000.0     63000   85000
+39                     Wales  2004  177000.0       111950.0     83000  110000
+40             West Midlands  2000  124000.0        65000.0     50000   47500
+41             West Midlands  2001  138000.0        73000.0     56000   57000
+42             West Midlands  2002  162500.0        86500.0     67500   69500
+43             West Midlands  2003  192450.0       108000.0     83500   88500
+44             West Midlands  2004  220000.0       127500.0    100000  105000
+45  Yorkshire and The Humber  2000   95000.0        54500.0     39000   52000
+46  Yorkshire and The Humber  2001  105000.0        58950.0     40000   59950
+47  Yorkshire and The Humber  2002  129000.0        69950.0     46000   75500
+48  Yorkshire and The Humber  2003  161726.0        89500.0     59950   94000
+49  Yorkshire and The Humber  2004  189950.0       115000.0     77000  115000
+                     LA_Name  Year  Detached  Semi-detached  Terraced   Flats
+0              East Midlands  2000   97000.0        55500.0     42950   43000
+1              East Midlands  2001  112500.0        62000.0     48000   52000
+2              East Midlands  2002  135000.0        77000.0     59995   66000
+3              East Midlands  2003  167000.0        97000.0     78000   87000
+4              East Midlands  2004  187000.0       118000.0     94000  102000
+5            East of England  2000  140000.0        85325.0     72000   59950
+6            East of England  2001  155000.0        99995.0     82995   67000
+7            East of England  2002  185000.0       125000.0    104000   85950
+8            East of England  2003  215000.0       148000.0    126000  105000
+9            East of England  2004  235000.0       165000.0    142000  120000
+15                North East  2000   92500.0        54000.0     36000   36000
+16                North East  2001   99950.0        57500.0     37500   39000
+17                North East  2002  121950.0        66000.0     41950   47000
+18                North East  2003  155000.0        85000.0     53000   63500
+19                North East  2004  183500.0       110000.0     70000   82000
+20                North West  2000  109000.0        59500.0     36050   53975
+21                North West  2001  119995.0        65000.0     38500   60000
+22                North West  2002  140000.0        76950.0     43000   78950
+23                North West  2003  170950.0        94950.0     55000   93100
+24                North West  2004  200500.0       122000.0     72500  114000
+25                South East  2000  193000.0       117751.5     89950   72500
+26                South East  2001  216500.0       130000.0    102500   84500
+27                South East  2002  248000.0       153500.0    125000  104000
+28                South East  2003  279950.0       177500.0    144000  120000
+29                South East  2004  300000.0       192000.0    158500  134950
+30                South West  2000  137000.0        83100.0     68500   58950
+31                South West  2001  153000.0        94000.0     78000   69500
+32                South West  2002  185000.0       119000.0     97000   88000
+33                South West  2003  225000.0       141000.0    120000  108000
+34                South West  2004  247000.0       160000.0    137500  124950
+35                     Wales  2000   89500.0        54000.0     40000   49000
+36                     Wales  2001   97950.0        58000.0     43500   57000
+37                     Wales  2002  119950.0        67307.5     49950   69950
+38                     Wales  2003  146972.5        85000.0     63000   85000
+39                     Wales  2004  177000.0       111950.0     83000  110000
+40             West Midlands  2000  124000.0        65000.0     50000   47500
+41             West Midlands  2001  138000.0        73000.0     56000   57000
+42             West Midlands  2002  162500.0        86500.0     67500   69500
+43             West Midlands  2003  192450.0       108000.0     83500   88500
+44             West Midlands  2004  220000.0       127500.0    100000  105000
+45  Yorkshire and The Humber  2000   95000.0        54500.0     39000   52000
+46  Yorkshire and The Humber  2001  105000.0        58950.0     40000   59950
+47  Yorkshire and The Humber  2002  129000.0        69950.0     46000   75500
+48  Yorkshire and The Humber  2003  161726.0        89500.0     59950   94000
+49  Yorkshire and The Humber  2004  189950.0       115000.0     77000  115000
+                     LA_Name  Year  Detached  Semi-detached  Terraced   Flats
+0              East Midlands  2000   97000.0        55500.0     42950   43000
+1              East Midlands  2001  112500.0        62000.0     48000   52000
+2              East Midlands  2002  135000.0        77000.0     59995   66000
+3              East Midlands  2003  167000.0        97000.0     78000   87000
+4              East Midlands  2004  187000.0       118000.0     94000  102000
+5            East of England  2000  140000.0        85325.0     72000   59950
+6            East of England  2001  155000.0        99995.0     82995   67000
+7            East of England  2002  185000.0       125000.0    104000   85950
+8            East of England  2003  215000.0       148000.0    126000  105000
+9            East of England  2004  235000.0       165000.0    142000  120000
+15                North East  2000   92500.0        54000.0     36000   36000
+16                North East  2001   99950.0        57500.0     37500   39000
+17                North East  2002  121950.0        66000.0     41950   47000
+18                North East  2003  155000.0        85000.0     53000   63500
+19                North East  2004  183500.0       110000.0     70000   82000
+20                North West  2000  109000.0        59500.0     36050   53975
+21                North West  2001  119995.0        65000.0     38500   60000
+22                North West  2002  140000.0        76950.0     43000   78950
+23                North West  2003  170950.0        94950.0     55000   93100
+24                North West  2004  200500.0       122000.0     72500  114000
+25                South East  2000  193000.0       117751.5     89950   72500
+26                South East  2001  216500.0       130000.0    102500   84500
+27                South East  2002  248000.0       153500.0    125000  104000
+28                South East  2003  279950.0       177500.0    144000  120000
+29                South East  2004  300000.0       192000.0    158500  134950
+30                South West  2000  137000.0        83100.0     68500   58950
+31                South West  2001  153000.0        94000.0     78000   69500
+32                South West  2002  185000.0       119000.0     97000   88000
+33                South West  2003  225000.0       141000.0    120000  108000
+34                South West  2004  247000.0       160000.0    137500  124950
+35                     Wales  2000   89500.0        54000.0     40000   49000
+36                     Wales  2001   97950.0        58000.0     43500   57000
+37                     Wales  2002  119950.0        67307.5     49950   69950
+38                     Wales  2003  146972.5        85000.0     63000   85000
+39                     Wales  2004  177000.0       111950.0     83000  110000
+40             West Midlands  2000  124000.0        65000.0     50000   47500
+41             West Midlands  2001  138000.0        73000.0     56000   57000
+42             West Midlands  2002  162500.0        86500.0     67500   69500
+43             West Midlands  2003  192450.0       108000.0     83500   88500
+44             West Midlands  2004  220000.0       127500.0    100000  105000
+45  Yorkshire and The Humber  2000   95000.0        54500.0     39000   52000
+46  Yorkshire and The Humber  2001  105000.0        58950.0     40000   59950
+47  Yorkshire and The Humber  2002  129000.0        69950.0     46000   75500
+48  Yorkshire and The Humber  2003  161726.0        89500.0     59950   94000
+49  Yorkshire and The Humber  2004  189950.0       115000.0     77000  115000
+                     LA_Name  Year  Detached  Semi-detached  Terraced   Flats
+0              East Midlands  2000   97000.0        55500.0     42950   43000
+1              East Midlands  2001  112500.0        62000.0     48000   52000
+2              East Midlands  2002  135000.0        77000.0     59995   66000
+3              East Midlands  2003  167000.0        97000.0     78000   87000
+4              East Midlands  2004  187000.0       118000.0     94000  102000
+5            East of England  2000  140000.0        85325.0     72000   59950
+6            East of England  2001  155000.0        99995.0     82995   67000
+7            East of England  2002  185000.0       125000.0    104000   85950
+8            East of England  2003  215000.0       148000.0    126000  105000
+9            East of England  2004  235000.0       165000.0    142000  120000
+15                North East  2000   92500.0        54000.0     36000   36000
+16                North East  2001   99950.0        57500.0     37500   39000
+17                North East  2002  121950.0        66000.0     41950   47000
+18                North East  2003  155000.0        85000.0     53000   63500
+19                North East  2004  183500.0       110000.0     70000   82000
+20                North West  2000  109000.0        59500.0     36050   53975
+21                North West  2001  119995.0        65000.0     38500   60000
+22                North West  2002  140000.0        76950.0     43000   78950
+23                North West  2003  170950.0        94950.0     55000   93100
+24                North West  2004  200500.0       122000.0     72500  114000
+25                South East  2000  193000.0       117751.5     89950   72500
+26                South East  2001  216500.0       130000.0    102500   84500
+27                South East  2002  248000.0       153500.0    125000  104000
+28                South East  2003  279950.0       177500.0    144000  120000
+29                South East  2004  300000.0       192000.0    158500  134950
+30                South West  2000  137000.0        83100.0     68500   58950
+31                South West  2001  153000.0        94000.0     78000   69500
+32                South West  2002  185000.0       119000.0     97000   88000
+33                South West  2003  225000.0       141000.0    120000  108000
+34                South West  2004  247000.0       160000.0    137500  124950
+35                     Wales  2000   89500.0        54000.0     40000   49000
+36                     Wales  2001   97950.0        58000.0     43500   57000
+37                     Wales  2002  119950.0        67307.5     49950   69950
+38                     Wales  2003  146972.5        85000.0     63000   85000
+39                     Wales  2004  177000.0       111950.0     83000  110000
+40             West Midlands  2000  124000.0        65000.0     50000   47500
+41             West Midlands  2001  138000.0        73000.0     56000   57000
+42             West Midlands  2002  162500.0        86500.0     67500   69500
+43             West Midlands  2003  192450.0       108000.0     83500   88500
+44             West Midlands  2004  220000.0       127500.0    100000  105000
+45  Yorkshire and The Humber  2000   95000.0        54500.0     39000   52000
+46  Yorkshire and The Humber  2001  105000.0        58950.0     40000   59950
+47  Yorkshire and The Humber  2002  129000.0        69950.0     46000   75500
+48  Yorkshire and The Humber  2003  161726.0        89500.0     59950   94000
+49  Yorkshire and The Humber  2004  189950.0       115000.0     77000  115000</code></pre>
+</div>
 </div>
 </section>
 <section id="assumption-documentation" class="level2">
