@@ -2,6 +2,7 @@
 import numpy as np
 import pandas as pd
 housing_sale_price = pd.read_excel("D:\\git_demo\\Data/Housing_data.xlsx", sheet_name="median_sale_price")
+housing_sale_price_regions = pd.read_excel("D:\\git_demo\\Data/Housing_data.xlsx", sheet_name="median_sale_price_regions")
 
 # Assumption: House price should always be a positive number.
 # Quality: RED
@@ -22,7 +23,6 @@ print(housing_sale_price_neg)
 # Impact: AMBER
 # Detailed description: We assume that the median sale price of each dwelling type in a local authority in time 't' should be less than time 't+1'.
 
-
 # function testing the above assumption. It will return true if the assumptions holds and false otherwise.
 
 # grouping rows (LA_Name) by columns (Year)
@@ -41,11 +41,16 @@ group.drop(group[group['Year'] < 2001].index, inplace = True)
 house_price_trend_neg = group[(group['Detached_trend']<0) | (group['Semi-detached_trend']<0) | (group['Terraced_trend']<0) | (group['Flats_trend']<0)]
 print(house_price_trend_neg)
 
-# Assumption: There is no change in house prices by local authority.
+# Assumption: There is regional variation in house prices.
 # Quality: RED
 # Impact: AMBER
-# Detailed description: We assume that there is no regional variation in house prices. 
+# Detailed description: We assume that median house prices of all dwelling types in London exceeds median house prices for every other region in England and Wales each year. 
 
 # function testing the above assumption. It will return true if the assumptions holds and false otherwise.
+def comparing_rows_columns():
+    for x in housing_sale_price_regions[housing_sale_price_regions['LA_Name'] == 'London']['Detached']:
+      for y in housing_sale_price_regions[housing_sale_price_regions['LA_Name'] != 'London']['Detached']:
+          return x > y
 
+comparing_rows_columns()
 

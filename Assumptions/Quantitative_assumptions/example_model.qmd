@@ -66,29 +66,6 @@ This section shows how each assumption should be stored in code.
 # Detailed description: Median house prices of all dwelling types in London exceeds median house prices for every other region in England and Wales each year. 
 ```
 
-```{python}
-import numpy as np
-import pandas as pd
-housing_sale_price_regions = pd.read_excel("D:\\git_demo\\Data/Housing_data.xlsx", sheet_name="median_sale_price_regions")
-
-# grouping rows (LA_Name) by columns (Year)
-group = housing_sale_price_regions.groupby(['LA_Name', 'Year'], as_index=False)[['Detached', 'Semi-detached', 'Terraced', 'Flats']].first()
-
-#print(group)
-
-# Using DataFrame.query() method extract column values.
-df=group[group['LA_Name'] == 'London']['Detached'] < group[group['LA_Name'] == 'Wales']
-#print(df2)
-
-LA_lon = group[group['LA_Name'].isin(['London']) ]
-LA = group[-group['LA_Name'].isin(['London']) ]
-for i in LA_lon:
-  for p in LA:
-    if i < p:
-        print (LA)
-```
-
-
 ## Assumption Documentation 
 
 After installing the assumptions' package and passing the code *'assumptions'*, an example assumptions' log will be created within the same folder. Open the newly created file on *'assumptions_caveats_log.md'* to see the example output on assumptions' log.
