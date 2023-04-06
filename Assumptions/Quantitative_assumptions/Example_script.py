@@ -9,10 +9,10 @@ housing_sale_price_regions = pd.read_excel("D:\\git_demo\\Data/Housing_data.xlsx
 # Impact: AMBER
 # Detailed description: We assume that no house is sold for a negative amount or for no value.
 
-# function testing the above assumption. It will return true if the assumptions holds and false otherwise.
+# testing the above assumption. It will return true if the assumptions holds and false otherwise.
 test_neg = ((housing_sale_price['Detached' or 'Semi-detached' or 'Terraced' or 'Flats']) < 0).any()
 print (test_neg)
-print("Status description: A true means there is a negative values (Fail). A false means there is no negative value (Pass).")
+print("Status description: A true means there is a negative value(Fail). A false means there is no negative value (Pass).")
 
 # printing location of failures
 housing_sale_price_neg = housing_sale_price[(housing_sale_price['Detached']<0) | (housing_sale_price['Semi-detached']<0) | (housing_sale_price['Terraced']<0) | (housing_sale_price['Flats']<0)]
@@ -23,7 +23,7 @@ print(housing_sale_price_neg)
 # Impact: AMBER
 # Detailed description: We assume that the median sale price of each dwelling type in a local authority in time 't' should be less than time 't+1'.
 
-# function testing the above assumption. It will return true if the assumptions holds and false otherwise.
+# testing the above assumption.
 
 # grouping rows (LA_Name) by columns (Year)
 group = housing_sale_price.groupby(['LA_Name', 'Year'], as_index=False)[['Detached', 'Semi-detached', 'Terraced', 'Flats']].first()
