@@ -9,21 +9,28 @@ housing_sale_price_regions = pd.read_excel("D:\\git_demo\\Data/Housing_data.xlsx
 # Impact: AMBER
 # Detailed description: We assume that no house is sold for a negative amount or for no value.
 
-# testing the above assumption. It will return true if the assumptions holds and false otherwise.
-test_neg = ((housing_sale_price['Detached' or 'Semi-detached' or 'Terraced' or 'Flats']) < 0).any()
-print (test_neg)
-print("Status description: A true means there is a negative value(Fail). A false means there is no negative value (Pass).")
+# testing first assumption. The function will return true if the assumptions holds and false otherwise.
 
-# printing location of failures
-housing_sale_price_neg = housing_sale_price[(housing_sale_price['Detached']<0) | (housing_sale_price['Semi-detached']<0) | (housing_sale_price['Terraced']<0) | (housing_sale_price['Flats']<0)]
-print(housing_sale_price_neg)
+# convert an individual column in the dataframe into a list
+Detached = housing_sale_price_regions['Detached'].values.tolist()
+
+def find_negatives(Detached):
+  for num in Detached:
+    if num < 0:
+      print(num, end=" ")
+      return False
+    else:
+      return True
+      
+# printing the result
+print(find_negatives(Detached))    
 
 # Assumption: Current trends in price will continue.
 # Quality: RED
 # Impact: AMBER
 # Detailed description: We assume that the median sale price of each dwelling type in a local authority in time 't' should be less than time 't+1'.
 
-# testing the above assumption.
+# testing second assumption.
 
 # grouping rows (LA_Name) by columns (Year)
 group = housing_sale_price.groupby(['LA_Name', 'Year'], as_index=False)[['Detached', 'Semi-detached', 'Terraced', 'Flats']].first()
@@ -46,7 +53,7 @@ print(house_price_trend_neg)
 # Impact: AMBER
 # Detailed description: We assume that median house prices of all dwelling types in London exceeds median house prices for every other region in England and Wales each year. 
 
-# function testing the above assumption. It will return true if the assumptions holds and false otherwise.
+# testing third assumption. It will return true if the assumptions holds and false otherwise.
 def comparing_rows_columns():
     for x in housing_sale_price_regions[housing_sale_price_regions['LA_Name'] == 'London']['Detached']:
       for y in housing_sale_price_regions[housing_sale_price_regions['LA_Name'] != 'London']['Detached']:
