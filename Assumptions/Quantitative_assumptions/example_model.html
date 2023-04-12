@@ -2670,32 +2670,26 @@ vertical-align: -.125em;
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Impact: AMBER</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Detailed description: We assume that no house is sold for a negative amount or for no value.</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>housing_sale_price <span class="op">=</span> pd.read_excel(<span class="st">&quot;D:</span><span class="ch">\\</span><span class="st">git_demo</span><span class="ch">\\</span><span class="st">Data/Housing_data.xlsx&quot;</span>, sheet_name<span class="op">=</span><span class="st">&quot;median_sale_price&quot;</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>housing_sale_price_regions <span class="op">=</span> pd.read_excel(<span class="st">&quot;D:</span><span class="ch">\\</span><span class="st">git_demo</span><span class="ch">\\</span><span class="st">Data/Housing_data.xlsx&quot;</span>, sheet_name<span class="op">=</span><span class="st">&quot;median_sale_price_regions&quot;</span>)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>housing_sale_price <span class="op">=</span> pd.read_excel(<span class="st">&quot;D:</span><span class="ch">\\</span><span class="st">git_demo</span><span class="ch">\\</span><span class="st">Data/Housing_data.xlsx&quot;</span>, sheet_name<span class="op">=</span><span class="st">&quot;median_sale_price&quot;</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># convert an individual column in the dataframe into a list</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>All_dwelling_types <span class="op">=</span> housing_sale_price[<span class="st">&#39;All_dwelling_types&#39;</span>].values.tolist()</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># convert an individual column in the dataframe into a list</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>Detached <span class="op">=</span> housing_sale_price_regions[<span class="st">&#39;Detached&#39;</span>].values.tolist()</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>Flats <span class="op">=</span> housing_sale_price_regions[<span class="st">&#39;Flats&#39;</span>].values.tolist()</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Detached)</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># iterating each number in list</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_negatives(Flats):</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> num <span class="kw">in</span> Flats:</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> num <span class="op">&lt;</span> <span class="dv">0</span>:</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>      <span class="bu">print</span>(num, end<span class="op">=</span><span class="st">&quot; &quot;</span>)</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> <span class="va">True</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> <span class="va">False</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(find_negatives(Flats))    </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_negatives(All_dwelling_types):</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> num <span class="kw">in</span> All_dwelling_types:</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> num <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>      <span class="bu">print</span>(num, end<span class="op">=</span><span class="st">&quot; &quot;</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co"># printing the result</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(find_negatives(All_dwelling_types))  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>[-88000.0, 109000.0, 95000.0, 97000.0, 124000.0, 140000.0, 295000.0, 193000.0, 137000.0, 89500.0, 99950.0, 119995.0, 105000.0, 112500.0, 138000.0, 155000.0, 310000.0, 216500.0, 153000.0, 97950.0, 121950.0, 140000.0, 129000.0, 135000.0, 162500.0, 185000.0, 352000.0, 248000.0, 185000.0, 119950.0, 155000.0, 170950.0, 161726.0, 167000.0, 192450.0, 215000.0, 390000.0, 279950.0, 225000.0, 146972.5, 183500.0, 200500.0, 189950.0, 187000.0, 220000.0, 235000.0, 430000.0, 300000.0, 247000.0, 177000.0]
-False</code></pre>
+<pre><code>-47000.0 False</code></pre>
 </div>
 </div>
 <ol start="2" type="1">

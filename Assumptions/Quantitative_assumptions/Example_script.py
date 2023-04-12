@@ -12,10 +12,10 @@ housing_sale_price_regions = pd.read_excel("D:\\git_demo\\Data/Housing_data.xlsx
 # testing first assumption. The function will return true if the assumptions holds and false otherwise.
 
 # convert an individual column in the dataframe into a list
-Detached = housing_sale_price_regions['Detached'].values.tolist()
+All_dwelling_types = housing_sale_price['All_dwelling_types'].values.tolist()
 
-def find_negatives(Detached):
-  for num in Detached:
+def find_negatives(All_dwelling_types):
+  for num in All_dwelling_types:
     if num < 0:
       print(num, end=" ")
       return False
@@ -23,7 +23,7 @@ def find_negatives(Detached):
       return True
       
 # printing the result
-print(find_negatives(Detached))    
+print(find_negatives(All_dwelling_types))    
 
 # Assumption: Current trends in price will continue.
 # Quality: RED
