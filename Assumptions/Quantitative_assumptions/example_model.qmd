@@ -22,18 +22,18 @@ This is a hypothetical model predicting house prices. The aim is to show users o
 
 
 ## Inputs
-We are using data on *'House Price Statistics for Small Areas'* as an example. This example dataset is stored in the data folder with the file name: *Housing_data.xlsx*  
+We are using data on *'House Price Statistics for Small Areas'* as an example. This example dataset is stored in the data folder with the file name: *Housing_data.xlsx*. The data shows house prices by property type for all local authorities and regions within England, as well as the number of property transactions. The data has been modified with the aim of testing some assumptions and producing a log using assumptions' package. 
 
 Below is a screenshot of what the data looks like:  
 
 ![](D:\Picture1.png)
 
 ## Assumptions  
-The model has three assumptions  
+The model has three assumptions:  
 
 1. House price should always be a positive number.
 2. Current trends in price will continue.
-3. There is no change in house prices by local authority.  
+3. There is regional variation in house prices. 
 
 ## Assumption recording
 
@@ -57,7 +57,7 @@ This section shows how each assumption should be stored in code.
 # Detailed description: We assume that the median sale price of each dwelling type in a local authority in time 't' should be less than time 't+1'.
 ```
 
-3) There is no change in house prices by local authority.  
+3) There is regional variation in house prices.  
 
 ```{python}
 # Assumption: There is regional variation in house prices.
