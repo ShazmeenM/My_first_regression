@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Shazmeen Maroof">
-<meta name="dcterms.date" content="2023-04-13">
+<meta name="dcterms.date" content="2023-04-17">
 
 <title>Quality Assurance Report</title>
 <style>
@@ -2558,6 +2558,7 @@ vertical-align: -.125em;
   <li><a href="#test-5" id="toc-test-5" class="nav-link" data-scroll-target="#test-5">Test 5</a></li>
   <li><a href="#test-6" id="toc-test-6" class="nav-link" data-scroll-target="#test-6">Test 6</a></li>
   <li><a href="#test-7" id="toc-test-7" class="nav-link" data-scroll-target="#test-7">Test 7</a></li>
+  <li><a href="#data-characteristics-tests" id="toc-data-characteristics-tests" class="nav-link" data-scroll-target="#data-characteristics-tests">Data characteristics’ tests</a></li>
   </ul>
 </nav>
 </div>
@@ -2584,7 +2585,7 @@ vertical-align: -.125em;
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 13, 2023</p>
+      <p class="date">April 17, 2023</p>
     </div>
   </div>
   
@@ -2910,10 +2911,8 @@ False</code></pre>
 <p>Description: Checks if any of the variables in the dataset has a negative value. Data specific description: Checks if the data on sales of detahced, semi-detached, terraced and flats has a negative value.</p>
 <div class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
-<pre><code>-47000.0 False
-Status:
-False
-Status description: A true means there is a negative values (Fail). A false means there is no negative value (Pass).</code></pre>
+<pre><code>-47000.0 Status: Fail. A fail means there is a negative value.
+False</code></pre>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 
@@ -2935,15 +2934,26 @@ Status description: A true means there is a negative values (Fail). A false mean
   </thead>
   <tbody>
     <tr>
-      <th>4</th>
-      <td>E06000005</td>
-      <td>Darlington</td>
+      <th>0</th>
+      <td>E06000001</td>
+      <td>Hartlepool</td>
       <td>2000</td>
-      <td>2469</td>
-      <td>618.0</td>
-      <td>901.0</td>
-      <td>855</td>
-      <td>-95</td>
+      <td>-47000.0</td>
+      <td>87995.0</td>
+      <td>52500.0</td>
+      <td>25000.0</td>
+      <td>-31475.0</td>
+    </tr>
+    <tr>
+      <th>113</th>
+      <td>E06000016</td>
+      <td>Leicester</td>
+      <td>2001</td>
+      <td>-65525.0</td>
+      <td>-114000.0</td>
+      <td>-59000.0</td>
+      <td>-46000.0</td>
+      <td>-31950.0</td>
     </tr>
   </tbody>
 </table>
@@ -2997,7 +3007,7 @@ Status description: A true means there is a negative values (Fail). A false mean
 <section id="test-5" class="level2">
 <h2 class="anchored" data-anchor-id="test-5">Test 5</h2>
 <p>Description: Checks if any values of the variables in the dataset contains a letter.<br>
-Data specific description: Checks if the data on sales of detahced, semi-detached, terraced and flats has a non-numeric value.</p>
+Data specific description: Checks if the data on median sale price of ‘all dwelling type’ has a non-numeric value.</p>
 <div class="cell" data-execution_count="7">
 <div class="cell-output cell-output-stdout">
 <pre><code>Status: Pass. A pass means the variable is a number.</code></pre>
@@ -3010,7 +3020,7 @@ Data specific description: Checks if the data on sales of detahced, semi-detache
 Data specific description: Checks if a local authority name appears only 5 times in the dataset.</p>
 <div class="cell" data-execution_count="8">
 <div class="cell-output cell-output-stdout">
-<pre><code>Status: Fail. A fail means the variable is not a number</code></pre>
+<pre><code>Status: Fail. A fail means that the value does not appear 5 times in the data</code></pre>
 </div>
 </div>
 </section>
@@ -3048,8 +3058,14 @@ Data specific description: Checks if a local authority name appears only 5 times
 
 [177 rows x 10 columns]</code></pre>
 </div>
+<div class="cell-output cell-output-stdout">
+<pre><code></code></pre>
 </div>
-<p>check if a series has the same data type, like number, letters, date etc ## Data characteristics’ tests</p>
+</div>
+<p>check if a series has the same data type, like number, letters, date etc</p>
+</section>
+<section id="data-characteristics-tests" class="level2">
+<h2 class="anchored" data-anchor-id="data-characteristics-tests">Data characteristics’ tests</h2>
 <p>Test 1: Plot trend of sales and prices by dwelling types</p>
 <p>Test 2: What does the data distribution look like?</p>
 <p>Test 3: Are there any outliers?</p>
