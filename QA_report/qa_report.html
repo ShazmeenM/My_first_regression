@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Shazmeen Maroof">
-<meta name="dcterms.date" content="2023-04-17">
+<meta name="dcterms.date" content="2023-04-24">
 
 <title>Quality Assurance Report</title>
 <style>
@@ -2558,7 +2558,6 @@ vertical-align: -.125em;
   <li><a href="#test-5" id="toc-test-5" class="nav-link" data-scroll-target="#test-5">Test 5</a></li>
   <li><a href="#test-6" id="toc-test-6" class="nav-link" data-scroll-target="#test-6">Test 6</a></li>
   <li><a href="#test-7" id="toc-test-7" class="nav-link" data-scroll-target="#test-7">Test 7</a></li>
-  <li><a href="#data-characteristics-tests" id="toc-data-characteristics-tests" class="nav-link" data-scroll-target="#data-characteristics-tests">Data characteristics’ tests</a></li>
   </ul>
 </nav>
 </div>
@@ -2585,7 +2584,7 @@ vertical-align: -.125em;
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 17, 2023</p>
+      <p class="date">April 24, 2023</p>
     </div>
   </div>
   
@@ -2599,7 +2598,8 @@ vertical-align: -.125em;
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <div class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
-<p>The title of the dataset is House Price Statistics for Small Areas. These statistics were adapted from data from the Land Registry licensed under the Open Government Licence v.3.0. The data has been taken from Office for National Statistics (ONS). The data is published annually. The data covers 2000 to 2004. The data limitations are unknown. The data is published without confidence intervals. Publishing confidence intervals is a work in progress. There are 490 rows and 8 columns in the dataset.</p>
+<p>This is a template for testing the quality of data. The idea is to check for any logical or arithmetic relationships in the data, check if values fall inside an acceptable/expected range and to publish a report on quality assurance checks performed on the dataset.</p>
+<p>For this example, we are using the data on house prices. The title of the dataset is House Price Statistics for Small Areas. These statistics were adapted from data from the Land Registry licensed under the Open Government Licence v.3.0. The data has been taken from Office for National Statistics (ONS). The data is published annually. The data covers 2000 to 2004. The data limitations are unknown. The data is published without confidence intervals. Publishing confidence intervals is a work in progress. There are 490 rows and 8 columns in the dataset.</p>
 </div>
 </div>
 </section>
@@ -2615,7 +2615,7 @@ Data specific description: Checks if sum of detahced, semi-detached, terraced ho
 <pre><code>Status: Fail. A fail means sum of varaibles do not equal total.
 False</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="3">
+<div class="cell-output cell-output-display" data-execution_count="12">
 
 <div>
 
@@ -2759,7 +2759,7 @@ Data specific description: Checks if the number of flats are lesser than the num
 <pre><code>Status: Fail. A fail means number of flats are not less than number of semi-detached houses in atleast one LA.
 False</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="4">
+<div class="cell-output cell-output-display" data-execution_count="13">
 
 <div>
 
@@ -2914,7 +2914,7 @@ False</code></pre>
 <pre><code>-47000.0 Status: Fail. A fail means there is a negative value.
 False</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="5">
+<div class="cell-output cell-output-display" data-execution_count="14">
 
 <div>
 
@@ -2968,7 +2968,7 @@ False</code></pre>
 <div class="cell-output cell-output-display">
 <p>Status: There are 2 missing values in the dataset.</p>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="6">
+<div class="cell-output cell-output-display" data-execution_count="15">
 
 <div>
 
@@ -3058,18 +3058,7 @@ Data specific description: Checks if a local authority name appears only 5 times
 
 [177 rows x 10 columns]</code></pre>
 </div>
-<div class="cell-output cell-output-stdout">
-<pre><code></code></pre>
 </div>
-</div>
-<p>check if a series has the same data type, like number, letters, date etc</p>
-</section>
-<section id="data-characteristics-tests" class="level2">
-<h2 class="anchored" data-anchor-id="data-characteristics-tests">Data characteristics’ tests</h2>
-<p>Test 1: Plot trend of sales and prices by dwelling types</p>
-<p>Test 2: What does the data distribution look like?</p>
-<p>Test 3: Are there any outliers?</p>
-<p>Test 4: Is there any correlation between tpe of dwellings and house price?</p>
 </section>
 
 </main>

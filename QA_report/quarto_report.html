@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Shazmeen Maroof">
-<meta name="dcterms.date" content="2023-03-21">
+<meta name="dcterms.date" content="2023-04-24">
 
 <title>Quality Assurance Report</title>
 <style>
@@ -2558,7 +2558,6 @@ vertical-align: -.125em;
   <li><a href="#test-5" id="toc-test-5" class="nav-link" data-scroll-target="#test-5">Test 5</a></li>
   <li><a href="#test-6" id="toc-test-6" class="nav-link" data-scroll-target="#test-6">Test 6</a></li>
   <li><a href="#test-7" id="toc-test-7" class="nav-link" data-scroll-target="#test-7">Test 7</a></li>
-  <li><a href="#data-characteristics-tests" id="toc-data-characteristics-tests" class="nav-link" data-scroll-target="#data-characteristics-tests">Data characteristics’ tests</a></li>
   </ul>
 </nav>
 </div>
@@ -2585,7 +2584,7 @@ vertical-align: -.125em;
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 21, 2023</p>
+      <p class="date">April 24, 2023</p>
     </div>
   </div>
   
@@ -2599,7 +2598,8 @@ vertical-align: -.125em;
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <div class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
-<p>The title of the dataset is House Price Statistics for Small Areas. These statistics were adapted from data from the Land Registry licensed under the Open Government Licence v.3.0. The data has been taken from Office for National Statistics (ONS). The data is published annually. The data covers 2000 to 2004. The data limitations are unknown. The data is published without confidence intervals. Publishing confidence intervals is a work in progress. There are 490 rows and 8 columns in the dataset.</p>
+<p>This is a template for testing the quality of data. The idea is to check for any logical or arithmetic relationships in the data, check if values fall inside an acceptable/expected range and to publish a report on quality assurance checks performed on the dataset.</p>
+<p>For this example, we are using the data on house prices. The title of the dataset is House Price Statistics for Small Areas. These statistics were adapted from data from the Land Registry licensed under the Open Government Licence v.3.0. The data has been taken from Office for National Statistics (ONS). The data is published annually. The data covers 2000 to 2004. The data limitations are unknown. The data is published without confidence intervals. Publishing confidence intervals is a work in progress. There are 490 rows and 8 columns in the dataset.</p>
 </div>
 </div>
 </section>
@@ -2911,9 +2911,8 @@ False</code></pre>
 <p>Description: Checks if any of the variables in the dataset has a negative value. Data specific description: Checks if the data on sales of detahced, semi-detached, terraced and flats has a negative value.</p>
 <div class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
-<pre><code>Status:
-False
-Status description: A true means there is a negative values (Fail). A false means there is no negative value (Pass).</code></pre>
+<pre><code>-47000.0 Status: Fail. A fail means there is a negative value.
+False</code></pre>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 
@@ -2935,15 +2934,26 @@ Status description: A true means there is a negative values (Fail). A false mean
   </thead>
   <tbody>
     <tr>
-      <th>4</th>
-      <td>E06000005</td>
-      <td>Darlington</td>
+      <th>0</th>
+      <td>E06000001</td>
+      <td>Hartlepool</td>
       <td>2000</td>
-      <td>2469</td>
-      <td>618.0</td>
-      <td>901.0</td>
-      <td>855</td>
-      <td>-95</td>
+      <td>-47000.0</td>
+      <td>87995.0</td>
+      <td>52500.0</td>
+      <td>25000.0</td>
+      <td>-31475.0</td>
+    </tr>
+    <tr>
+      <th>113</th>
+      <td>E06000016</td>
+      <td>Leicester</td>
+      <td>2001</td>
+      <td>-65525.0</td>
+      <td>-114000.0</td>
+      <td>-59000.0</td>
+      <td>-46000.0</td>
+      <td>-31950.0</td>
     </tr>
   </tbody>
 </table>
@@ -2997,25 +3007,58 @@ Status description: A true means there is a negative values (Fail). A false mean
 <section id="test-5" class="level2">
 <h2 class="anchored" data-anchor-id="test-5">Test 5</h2>
 <p>Description: Checks if any values of the variables in the dataset contains a letter.<br>
-Data specific description: Checks if the data on sales of detahced, semi-detached, terraced and flats has a non-numeric value.<br>
-Status:</p>
+Data specific description: Checks if the data on median sale price of ‘all dwelling type’ has a non-numeric value.</p>
+<div class="cell" data-execution_count="7">
+<div class="cell-output cell-output-stdout">
+<pre><code>Status: Pass. A pass means the variable is a number.</code></pre>
+</div>
+</div>
 </section>
 <section id="test-6" class="level2">
 <h2 class="anchored" data-anchor-id="test-6">Test 6</h2>
 <p>Description: Checks if a certain value appears specific times in data.<br>
-Data specific description: Checks if a local authority name appears only 5 times in the dataset.<br>
-Status:</p>
+Data specific description: Checks if a local authority name appears only 5 times in the dataset.</p>
+<div class="cell" data-execution_count="8">
+<div class="cell-output cell-output-stdout">
+<pre><code>Status: Fail. A fail means that the value does not appear 5 times in the data</code></pre>
+</div>
+</div>
 </section>
 <section id="test-7" class="level2">
 <h2 class="anchored" data-anchor-id="test-7">Test 7</h2>
-<p>Description: Checks if the value of a variable is increasing over time. Data specific description: Total sale price of each dwelling type in time ‘t’ should be less than time ‘t+1’. Status:</p>
-</section>
-<section id="data-characteristics-tests" class="level2">
-<h2 class="anchored" data-anchor-id="data-characteristics-tests">Data characteristics’ tests</h2>
-<p>Test 1: Plot trend of sales and prices by dwelling types</p>
-<p>Test 2: What does the data distribution look like?</p>
-<p>Test 3: Are there any outliers?</p>
-<p>Test 4: Is there any correlation between tpe of dwellings and house price?</p>
+<p>Description: Checks if the value of a variable is increasing over time. Data specific description: Total sale price of each dwelling type in time ‘t’ should be less than time ‘t+1’.</p>
+<p>Status:</p>
+<div class="cell" data-execution_count="9">
+<div class="cell-output cell-output-stdout">
+<pre><code>               LA_Name  Year  Detached  Semi-detached  Terraced    Flats  \
+2            Allerdale  2002  124200.0        59950.0   44995.0  62225.0   
+3            Allerdale  2003  143500.0        83000.0   63025.0  56750.0   
+12      Aylesbury Vale  2002  232500.0       143000.0  125000.0  98000.0   
+13      Aylesbury Vale  2003  130000.0        67500.0   37000.0  45750.0   
+18   Barrow-in-Furness  2003  160500.0        91975.0   76000.0  99950.0   
+..                 ...   ...       ...            ...       ...      ...   
+481            Wycombe  2001  149500.0        85000.0   69500.0  52500.0   
+482            Wycombe  2002  118644.0        63000.0   42000.0  50875.0   
+484            Wycombe  2004  175000.0       110000.0   83725.0  75000.0   
+486               York  2001   95000.0        55000.0   37500.0  90000.0   
+488               York  2003  195000.0       119950.0   93500.0  64000.0   
+
+     Detached_trend  Semi-detached_trend  Terraced_trend  Flats_trend  
+2             525.0             -14050.0        -13505.0      13225.0  
+3           19300.0              23050.0         18030.0      -5475.0  
+12           7500.0               2000.0        -20000.0       3000.0  
+13        -102500.0             -75500.0        -88000.0     -52250.0  
+18         -16975.0              -3025.0        -11000.0      17975.0  
+..              ...                  ...             ...          ...  
+481        -99500.0             -52000.0        -52000.0     -30625.0  
+482        -30856.0             -22000.0        -27500.0      -1625.0  
+484         26050.0              23750.0         18725.0      -9000.0  
+486        -18500.0             -17500.0        -25450.0      21138.5  
+488        -42000.0             -18050.0        -37875.0     -71000.0  
+
+[177 rows x 10 columns]</code></pre>
+</div>
+</div>
 </section>
 
 </main>

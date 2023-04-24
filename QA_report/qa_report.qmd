@@ -32,7 +32,9 @@ nrow, ncol = housing_sale_counts.shape
 ## Introduction
 
 ```{python}
-display(Markdown(f""" The title of the dataset is {housing_introduction.at[0, 'Column_b']}. {housing_introduction.at[1, 'Column_b']}. The data has been taken from {housing_introduction.at[2, 'Column_b']}. The data is published {housing_introduction.at[3, 'Column_b']}. The data covers {housing_introduction.at[4, 'Column_b']}. The data limitations are {housing_introduction.at[5, 'Column_b']}. The data is published {housing_introduction.at[7, 'Column_b']} confidence intervals. {housing_introduction.at[8, 'Column_b']}. There are {nrow} rows and {ncol} columns in the dataset. """))
+display(Markdown(f""" This is a template for testing the quality of data. The idea is to check for any logical or arithmetic relationships in the data, check if values fall inside an acceptable/expected range and to publish a report on quality assurance checks performed on the dataset. 
+
+For this example, we are using the data on house prices. The title of the dataset is {housing_introduction.at[0, 'Column_b']}. {housing_introduction.at[1, 'Column_b']}. The data has been taken from {housing_introduction.at[2, 'Column_b']}. The data is published {housing_introduction.at[3, 'Column_b']}. The data covers {housing_introduction.at[4, 'Column_b']}. The data limitations are {housing_introduction.at[5, 'Column_b']}. The data is published {housing_introduction.at[7, 'Column_b']} confidence intervals. {housing_introduction.at[8, 'Column_b']}. There are {nrow} rows and {ncol} columns in the dataset. """))
 ``` 
 
 
@@ -178,16 +180,3 @@ group.drop(group[group['Year'] < 2001].index, inplace = True)
 house_price_trend_neg = group[(group['Detached_trend']<0) | (group['Semi-detached_trend']<0) | (group['Terraced_trend']<0) | (group['Flats_trend']<0)]
 print(house_price_trend_neg)
 ```
-
-
-check if a series has the same data type, like number, letters, date etc  
-
-## Data characteristics' tests
-
-Test 1: Plot trend of sales and prices by dwelling types
-
-Test 2: What does the data distribution look like? 
-
-Test 3: Are there any outliers?
-
-Test 4: Is there any correlation between tpe of dwellings and house price?
