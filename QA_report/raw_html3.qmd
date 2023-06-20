@@ -1,0 +1,10 @@
+---
+title: "Untitled"
+format: html
+---
+
+<div class="card">
+  <h2 id="title" contenteditable>Card Title</h2>
+  <p id="content" contenteditable>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic molestiae dolor, veritatis ex provident quia vero odit ducimus fugiat illo repudiandae doloribus. Quibusdam aliquid, quasi ipsam sint ab porro ex?</p>
+</div>
+

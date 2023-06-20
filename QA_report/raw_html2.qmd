@@ -1,0 +1,27 @@
+---
+title: "Untitled"
+format: html
+---
+
+<div id="example-one" contenteditable="true">
+
+</div>
+<p id="save">Save Text</p>
+
+<script>
+document.getElementById("save").addEventListener('click', function(el) {
+    localStorage.setItem("text", document.getElementById('example-one').innerHTML);
+});
+
+window.onload = function() {
+    var text = localStorage.getItem("text");
+    document.getElementById('example-one').innerHTML = text;
+}
+</script>
+
+<label for="freeform">Tell us how you heard about HubSpot:</label>
+<br>
+
+<textarea id="freeform" name="freeform" rows="4" cols="50">
+Enter text here...
+</textarea>

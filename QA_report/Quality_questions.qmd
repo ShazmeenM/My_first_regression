@@ -1,0 +1,300 @@
+---
+title: "Guidance on Quality Questions"
+author: "Shazmeen Maroof"
+format: 
+  html:
+    page-layout: full
+output:
+    html_document
+---
+
+# Introduction  
+This guidance provide set of questions to help analytical and statistical teams evaluate the quality of their analysis throughout the production cycle. 
+
+The aim of producing this guidance is:  
+1. To ensure there is a consistent QA approach across divisions/departments.  
+2. To help teams comply with best practice guidance by promoting the use of AQUA book and Code of Practice for Statistics.  
+3. To ensure there is a consistent understanding of quality across the team.  
+4. To encourage them producing important project documentation i.e., assumptions’ log, decision log, risk register etc.  
+4. Sign post users towards relevant resources for evaluating quality. 
+
+## Similar Guidance
+
+This guidance has heavily refernced text from AQUA book and Code of Practice for Statistics. Two other guduances have motivated us to produce this. One is analysis function guidance on 'Quality questions and red flags' and the other is OSR guidance on 'Thinking about quality when producing statistics'. 
+
+## How is this guidance different?
+
+Building on the cross-government resources on best practice, this gudiance takes one step further by separating the quality questions relevant for each stage of analysis. The quality questions will only be fit for purpose if they are asked at the right stage, once that stage is passed, it will be difficult going back and addressing the risks.  
+
+Quality questions are also separated as per the responsible individuals required for answering them. The idea is to highlight a clear line of accountability as per AQUA book guidance in an easy-to-understand manner. The hope is to make it easier for the teams to clearly see the AQUA roles.  
+
+Each question is linked with the Code of Practice for Statistics (pillars and practices). This is to help the users understand the pillars and practices of Code of Practices covered by the quality question.  
+
+## When to use this guidance?
+We encourgae all teams starting to work on a new piece of analysis to maintain the log of answers using this templates. For teams, who have already, they can still think backwards for the questions asked at the scope and design stage. Teams can also use it in undersatnding the AQUA roles and Code of Practice.
+
+## Structure 
+
+There are 60 questions in total covering all stages of analytical cycle. AQUA book has divided the stages of analytical cycle into 1) Scoping, 2) Design, 3) Conducting and checking analysis and 4) Delivery  
+We tried to be consitent in the use of terminology by sticking with these stages.  
+
+Each stage is divided into the following tabs:
+
+### AQUA roles  
+In order to ensure that the responsibilities required to deliver analysis that is fit-for-purpose, AQUA book identifies a framework with 3 important roles: the commissioner, the analyst and the analytical assurer. Moreover, there has to be an SRO.
+
+
+Responsibilities of Commissioner  
+* Ensures that context is understood so QA is appropriate and proportionate  
+* Ensures that there is enough time and resource for required assurance and account for risk  
+* Must understand strengths and limitations including uncertainty so results are interpreted correctly  
+* Delivers QUALITY OF OUTCOME
+
+Responsibilities of Analyst  
+* Assist the commissioner in framing the question to ensure the right analysis is done  
+* Manage external specialists  
+* Design, build, document and run the analysis  
+* Delivers QUALITY OF CONTENT
+
+Responsibilities of Analytical Assurer  
+* Ensures that the evidence is there to demonstrate that appropriate QA has happened and uncertainty is communicated appropriately  
+* Advises the commissioner on whether appropriate QA has happened and about any outstanding risks  
+* Involved throughout from design through to use  
+* Delivers QUALITY OF PROCESS
+
+Responsibilities of SRO  
+* A Single Responsible Owner for each model throughout its lifecycle
+
+For the purpose of this guidance, it would be useful if all teams identify commissioner, analytical assurer, analyst and SRO. There main duties are described below: 
+
+
+### Code of Practice for Statistics
+There are three pillars of Code of Practice for Statistics i.e., Trustworthiness, Quality and Value. Each pillar has 4 to 8 principes. 
+
+### Log of Answers  
+We encourage teams to answer all questions in the tab 'Log of Answers' and save a copy on your machine. You won't be able to eidt answers, however, you will be able to copy paste across the file. No one will be able to see your answers. Answers 60 questins seem quite alot but this log of answers will save your time on lengthy readings, writing the analysis along the way, most of the answers would help you in producing other documents, for example,assumptions’ log, decision log.
+
+### SRO sign-off
+
+
+## Caveats
+Missed responsibilities in AQUA book, missed principles from Code of Practice, how relevant are the stated principles for non-official stats, ad-hoc requests, experimental statistics.
+
+
+# Stages
+
+
+## I. Scoping
+
+::: {.panel-tabset}
+
+## Importance 
+
+| Quality Questions | Why do I need to know the answer to this? | 
+|---------|:-----|
+| What question is the analysis trying to answer?     | A clear understanding of the question is essential for your team to scope out requirements, in understanding the strengths and limitations of the analysis and ensuring that it is fit for purpose. If the question is unclear this risks performing an analysis which does not meet the required user needs.  |   
+| Why do we need to answer this question? | Exploring and understanding the need for, purpose of and end use of analysis will help you to understand the importance and impact of your work, how it supports decision making and how others will use it. It will also help you to make sure that all stages of analysis are fit for purpose and that the final output correctly answers the question you began with.  |
+| Is the model business critical?   | Identifying if the model is business critical helps to define the level of assurance needed to ensure it is fit for purpose. |
+
+## AQUA Roles
+
+
+| Quality Question | Who is responsible for answering this? | Which AQUA book responsibilities have a role? | 
+|---------|:-----|------:|
+| What question is the analysis trying to answer? | Commissioner, analyst |    The commissioner plays an essential role in communicating the commission and working with the analyst to ensure that an appropriate understanding of the problem is captured. | 
+| Why do we need to answer this question? | Commissioner, analyst, analytical assurer |   The analyst must document the purpose of the analysis and the levels of quality and certainty that are required for this purpose. Commissioner and analytical assurer should make sure the work aligns with the stated purpose. |  
+| Is the model business critical?   |     |      |  
+
+
+## Code of Practice for Statistics
+
+| Quality Questions | Which pillar and principle of Code of Practice are relevant here? | 
+|---------|:-----|
+| What question is the analysis trying to answer?     | V1.1 Statistics producers should maintain and refresh their understanding of the use and potential use of the statistics and data. They should consider the ways in which the statistics might be used and the nature of the decisions that are or could be informed by them.  |  
+| Why do we need to answer this question? | V1.1 Statistics producers should maintain and refresh their understanding of the use and potential use of the statistics and data. They should consider the ways in which the statistics might be used and the nature of the decisions that are or could be informed by them. |
+| Is the model business critical?   |
+
+## Helpful resources
+
+| Quality Questions | What help is available to answer this question? | 
+|---------|:-----|
+| What question is the analysis trying to answer?     | AQUA Book, Analysis Functional Standards  |
+| Why do we need to answer this question? | Get in touch with user research group or equivalent in your department. |
+| Is the model business critical?   | Definition of business critical model. |
+
+## Log of Answers
+
+| Quality Questions | Answer | Is SRO satisfied with the answer provided? | Date answer added | Next review due on |
+|:-----|:-----|:-----|:-----|:-----|
+| What question is the analysis trying to answer? 
+| <p id="content" contenteditable>Enter your answer here... </p>  
+| Why do we need to answer this question?  
+<td ><p id="content" contenteditable>Enter your answer here...</p></td>   
+| Is the model business critical? 
+</h2>
+  <textarea id="content" contenteditable>Enter your answer here... </textarea> 
+
+
+:::
+
+## II. Design
+
+::: {.panel-tabset}
+
+## Importance 
+
+| Quality Questions | Why do I need to know the answer to this? | 
+|---------|:-----|
+| Is there a simple description in plain English of what the analysis is for and what it does?     | Writing a plain English description of what the analysis is for and how it works helps the team to assure themselves that they as well as others with no subject related or technical expertise can understand what the analysis is for and broadly how it works.  |   
+| Does the analysis have a logic flowchart which explains the end-to-end conceptual steps in the work flow? | Setting out a clear summary of the analysis process in a diagram helps the team, users and customers to understand at a glance what the analysis does, where inputs come from, how they are processed and how outputs are generated.  |
+| When do you expect to start and finish each stage of analysis i.e., data collection, processing, quality assuarnce, analaysis and dissemination?   | It is important to clearly set out the time requied to perform each stage of analysis from start to finish. It would help the team to evaluate if the current balance of the time split across these stages looks effective and challenge it if the target looks so ambitious.  |
+
+## AQUA Roles
+
+
+| Quality Question | Who is responsible for answering this? | Which AQUA book responsibilities have a role? | 
+|---------|:-----|------:|
+| Is there a simple description in plain English of what the analysis is for and what it does? | Analyst, analytical assurer |  Analyst should produce appropriate design documentation. Best practice can include a concept of analysis, user requirements, design specification, functional specification, data dictionary, and test plan. Analytical assurer should be involved. | 
+| Does the analysis have a logic flowchart which explains the end-to-end conceptual steps in the work flow? | Analyst, analytical assurer |   Analyst should produce appropriate design documentation. Best practice can include a concept of analysis, user requirements, design specification, functional specification, data dictionary, and test plan. Analytical assurer should be involved. |  
+| When do you expect to start and finish each stage of analysis i.e., data collection, processing, quality assuarnce, analaysis and dissemination?   |  Commissioner, analyst   |  When commissioning a piece of analysis, a project is established and the typical project trade-offs between time, resources and quality must be made, recorded and communicated to the analyst. The analyst may also have a role in working with the commissioner to establish the optimal balance of these constraints.    |  
+
+## Code of Practice for Statistics
+
+| Quality Questions | Which pillar and principle of Code of Practice are relevant here? | 
+|---------|:-----|
+| Is there a simple description in plain English of what the analysis is for and what it does?    | V3 Clarity and insight Statistics and data should be presented clearly, explained meaningfully and provide authoritative insights that serve the public good.  |  
+| Does the analysis have a logic flowchart which explains the end-to-end conceptual steps in the work flow? | V3 Clarity and insight Statistics and data should be presented clearly, explained meaningfully and provide authoritative insights that serve the public good. |
+| When do you expect to start and finish each stage of analysis i.e., data collection, processing, quality assuarnce, analaysis and dissemination? |
+
+## Helpful resources
+
+| Quality Questions | What help is available to answer this question? | 
+|---------|:-----|
+| Is there a simple description in plain English of what the analysis is for and what it does?    | |
+| Does the analysis have a logic flowchart which explains the end-to-end conceptual steps in the work flow? | |
+| When do you expect to start and finish each stage of analysis i.e., data collection, processing, quality assuarnce, analaysis and dissemination?   |  |
+
+## Log of Answers
+
+| Quality Questions |  Answer  | Is SRO satisfied with the answer provided? | Date answer added | Next review due on |
+|:------|:-------|:-----|:-----|
+| Is there a simple description in plain English of what the analysis is for and what it does?
+<p id="content" contenteditable>Enter your answer here... </p>  
+| Does the analysis have a logic flowchart which explains the end-to-end conceptual steps in the work flow? 
+<td ><p id="content" contenteditable>Enter your answer here...</p></td>   
+| When do you expect to start and finish each stage of analysis i.e., data collection, processing, quality assuarnce, analaysis and dissemination?
+</h2>
+  <textarea id="content" contenteditable>Enter your answer here... </textarea> 
+
+:::
+
+## III. Conducting and Checking Analysis
+
+
+::: {.panel-tabset}
+
+## Importance 
+
+| Quality Questions | Why do I need to know the answer to this? | 
+|---------|:-----|
+| How the data used in the analysis will be processed prior to and during use?     | Operations on the data inputs will have wide-ranging effects on processes and outputs. A clear understanding of how these processes affect the workflow is essential for understanding quality.  |   
+| Is the data appropriate given the methods selected? | A comprehensive understanding of data inputs is a prerequisite to meeting user needs.  |
+| What are the strengths and limitations of the data that you use?   | Not all data can be usd to answer particular research questions. The formatting, the time scale, the granularity must all be assessed and found relevant to the research question. A comprehensive understanding of data inputs is a prerequisite to meeting user needs. Without understanding where data is strong and where it is weak, it is impossible to make meaningful improvements to the analysis and/or the inputs to manage the limitations.     |
+
+## AQUA Roles
+
+
+| Quality Question | Who is responsible for answering this? | Which AQUA book responsibilities have a role? | 
+|---------|:-----|------:|
+| How the data used in the analysis will be processed prior to and during use? | Analyst, analytical assurer |    Analyst should collect and manage data. Understand data accuracy and uncertainties. Capture, manage and understand implicit assumptions made. Analytical assurer should be involved.  | 
+| Is the data appropriate given the methods selected? | Analyst, analytical assurer, commissioner |   Analyst should understand data accuracy and uncertainties and capture, manage and understand implicit assumptions made. Analyst should engage appropriate subject matter experts, at the appropriate time, when collecting data. NB: The commissioner may be a subject matter expert. Analytical assurere should also be involved. |  
+| What are the strengths and limitations of the data that you use?    |  Analyst, analytical assurer   |   If applicable, analyst should undertake parametric analysis to understand the consequences of missing or uncertain data and assumptions. Analytical assurer should be involved.    |  
+
+
+## Code of Practice for Statistics
+
+| Quality Questions | Which pillar and principle of Code of Practice are relevant here? | 
+|---------|:-----|
+| How the data used in the analysis will be processed prior to and during use?     | Q1 Suitable data sources Statistics should be based on the most appropriate data to meet intended uses. The impact of any data limitations for use should be assessed, minimised and explained.  |  
+| Is the data appropriate given the methods selected? | Q1 Suitable data sources Statistics should be based on the most appropriate data to meet intended uses. The impact of any data limitations for use should be assessed, minimised and explained. |
+| What are the strengths and limitations of the data that you use?    | Q1 Suitable data sources Statistics should be based on the most appropriate data to meet intended uses. The impact of any data limitations for use should be assessed, minimised and explained. Q1.5 Potential bias, uncertainty and possible distortive effects in the source data should be identified and the extent of any impact on the statistics should be clearly reported. |
+
+## Helpful resources
+
+| Quality Questions | What help is available to answer this question? | 
+|---------|:-----|
+| How the data used in the analysis will be processed prior to and during use?     |   |
+| Is the data appropriate given the methods selected? |  |
+| What are the strengths and limitations of the data that you use?    |  |
+
+## Log of Answers
+
+| Quality Questions | Answer | Is SRO satisfied with the answer provided? | Date answer added | Next review due on |
+|:-----|:-----|:-----|:-----|
+| How the data used in the analysis will be processed prior to and during use?
+ <p id="content" contenteditable>Enter your answer here... </p>  
+| Is the data appropriate given the methods selected? 
+<td ><p id="content" contenteditable>Enter your answer here...</p></td>   
+| What are the strengths and limitations of the data that you use?  
+</h2>
+  <textarea id="content" contenteditable>Enter your answer here... </textarea> 
+
+:::
+
+## IV. Delivery
+
+
+::: {.panel-tabset}
+
+## Importance 
+
+| Quality Questions | Why do I need to know the answer to this? | 
+|---------|:-----|
+| Could you give a clear account of what can and cannot be inferred from your final output?     | A clear understanding of the question is essential for your team to scope out requirements, in understanding the strengths and limitations of the analysis and ensuring that it is fit for purpose. If the question is unclear this risks performing an analysis which does not meet the required user needs.  |   
+| Have you assessed the impact of the data and model limitations and set out how they will affect the quality and use of the outputs? | It is important to describe why each limitation related to data and methods exist, why it cannot be overcome using the chosen approach and what impact does it have on the quality and interpretation of the output produced. Results are of very little value if limitations aren't documented and the rationale for them explained.  |
+| Have you sense checked outputs with user groups and stakeholders?  | The credibility of outputs should be checked by experts and sense checked to ensure they are useful. |
+
+## AQUA Roles
+
+
+| Quality Question | Who is responsible for answering this? | Which AQUA book responsibilities have a role? | 
+|---------|:-----|------:|
+| Could you give a clear account of what can and cannot be inferred from your final output? | Commissioner |    During the delivery phase, the commissioner has another important role when they receive the interpretation of the results and determine whether it has addressed their request. | 
+| Have you assessed the impact of the data and model limitations and set out how they will affect the quality and use of the outputs? | Commissioner, analytical assurer |   The commissioner must be confident in the quality of the outputs and understand the strengths, limitations and contexts of the analysis so that the results are correctly interpreted. The analytical assurer sign-off provides confidence that analysis risks, limitations and major assumptions are understood by the users of the analysis  |  
+| Have you sense checked outputs with user groups and stakeholders?  |     |      |  
+
+
+## Code of Practice for Statistics
+
+| Quality Questions | Which pillar and principle of Code of Practice are relevant here? | 
+|---------|:-----|
+| Could you give a clear account of what can and cannot be inferred from your final output?     | Q2.4 Relevant limitations arising from the methods and their application, including bias and uncertainty, should be identified and explained to users. An indication of their likely scale and the steps taken to reduce their impact on the statistics should be included in the explanation.  |  
+| Have you assessed the impact of the data and model limitations and set out how they will affect the quality and use of the outputs? | Q3 Assured quality Producers of statistics and data should explain clearly how they assure themselves that statistics and data are accurate, reliable, coherent and timely. Q1.5 Potential bias, uncertainty and possible distortive effects in the source data should be identified and the extent of any impact on the statistics should be clearly reported. Q3.1 Statistics should be produced to a level of quality that meets users’ needs. The strengths and limitations of the statistics and data should be considered in relation to different uses, and clearly explained alongside the statistics. |
+| Have you sense checked outputs with user groups and stakeholders?   | Q3 Assured quality Producers of statistics and data should explain clearly how they assure themselves that statistics and data are accurate, reliable, coherent and timely. |
+
+## Helpful resources
+
+| Quality Questions | What help is available to answer this question? | 
+|---------|:-----|
+| Could you give a clear account of what can and cannot be inferred from your final output?     |   |
+| Have you assessed the impact of the data and model limitations and set out how they will affect the quality and use of the outputs? |  |
+| Have you sense checked outputs with user groups and stakeholders?  |  |
+
+## Log of Answers
+
+| Quality Questions | Answer | Is SRO satisfied with the answer provided? | Date answer added | Next review due on |
+|:-----|:-----|:-----|:-----|
+| Could you give a clear account of what can and cannot be inferred from your final output?
+ <p id="content" contenteditable>Enter your answer here... </p>  
+| Have you assessed the impact of the data and model limitations and set out how they will affect the quality and use of the outputs?  
+<td ><p id="content" contenteditable>Enter your answer here...</p></td>   
+| Have you sense checked outputs with user groups and stakeholders?
+</h2>
+  <textarea id="content" contenteditable>Enter your answer here... </textarea> 
+
+:::
+
+
+## Feedback 
+
+<iframe width="640px" height="480px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=vweIB4LOiEa84A2BFoTcRkDkgdjwbsZIk809xX5dKNlUNjlFOEJITFdITDdQMTc3ODBaVTdLMzdLTC4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
