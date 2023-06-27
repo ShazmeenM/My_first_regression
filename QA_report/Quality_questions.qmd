@@ -4,6 +4,7 @@ author: "Shazmeen Maroof"
 format: 
   html:
     page-layout: full
+    css: style.css
 output:
     html_document
 ---
@@ -67,12 +68,15 @@ Responsibilities of SRO
 
 For the purpose of this guidance, it would be useful if all teams identify commissioner, analytical assurer, analyst and SRO. There main duties are described below: 
 
+* Attach a link to AQUA book
 
 ### Code of Practice for Statistics
 There are three pillars of Code of Practice for Statistics i.e., Trustworthiness, Quality and Value. Each pillar has 4 to 8 principes. 
 
+* Attach a link to Code of Practice for Statistics
 ### Log of Answers  
-We encourage teams to answer all questions in the tab 'Log of Answers' and save a copy on your machine. You won't be able to eidt answers, however, you will be able to copy paste across the file. No one will be able to see your answers. Answers 60 questins seem quite alot but this log of answers will save your time on lengthy readings, writing the analysis along the way, most of the answers would help you in producing other documents, for example,assumptions’ log, decision log.
+We encourage teams to answer all questions in the tab 'Log of Answers' and save a copy on your machine. Anyone having the HTML file will be able to edit answers and the answers can be copied from this HTML to be in other files. As you will be saving the log of answers on your machine, people who don't have access to your HTML file will not ne able to see your answers. 
+Answering 60 questins may seem a daunting task but this log of answers will later save your time on reading and fully undertsanding AQUA book and in ensuring your analysis/statistics complies with Code of Practice. It would also help you in writing the analysis/output report along the way. Moreover, most of the answers would help you in producing other important documents, for example, assumptions’ log, decision log, technical guide for users etc. 
 
 ### SRO sign-off
 
@@ -95,6 +99,205 @@ Missed responsibilities in AQUA book, missed principles from Code of Practice, h
 | What question is the analysis trying to answer?     | A clear understanding of the question is essential for your team to scope out requirements, in understanding the strengths and limitations of the analysis and ensuring that it is fit for purpose. If the question is unclear this risks performing an analysis which does not meet the required user needs.  |   
 | Why do we need to answer this question? | Exploring and understanding the need for, purpose of and end use of analysis will help you to understand the importance and impact of your work, how it supports decision making and how others will use it. It will also help you to make sure that all stages of analysis are fit for purpose and that the final output correctly answers the question you began with.  |
 | Is the model business critical?   | Identifying if the model is business critical helps to define the level of assurance needed to ensure it is fit for purpose. |
+
+
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+    <th> Quality Questions</th>
+    <th> Why do I need to know the answer to this?</th>
+
+  </tr style="border-bottom: 1px solid black;">
+  <tr>
+
+  <td>What
+  question is the analysis trying to answer?</td>
+  <td>A clear understanding of
+  the question is essential. It enables your team to scope out requirements,
+  understand the strengths and limitations of the analysis and ensure that it
+  is fit for purpose.<br>
+    If the question is unclear you risk designing and delivering analysis which
+  does not meet user needs.</td>
+ </tr>
+ <tr>
+  <td>Why
+  do we need to answer this question?</td>
+  <td>Exploring and understanding
+  the need for, purpose of and end use of analysis will help you to understand
+  the importance and impact of your work, how it supports decision making and
+  how others will use it. It will also help you to make sure that all stages of
+  analysis are fit for purpose and that the final output correctly answers the
+  question you began with.<span style='mso-spacerun:yes'>  </span></td>
+ </tr>
+ <tr height=133 style='height:100.0pt'>
+  <td height=133 class=xl6932690 width=315 style='height:100.0pt;width:236pt'>Which
+  organisational priorities does this work address?</td>
+  <td class=xl6632690 width=396 style='width:297pt'>Setting out how the work
+  aligns with organisational priorities helps you to understand how the work
+  fits with wider strategic objectives and how important it is to carry out the
+  analysis now. It informs the level of assurance needed to make sure the work
+  is fit for purpose.</td>
+ </tr>
+ <tr height=200 style='height:150.0pt'>
+  <td height=200 class=xl6932690 width=315 style='height:150.0pt;width:236pt'>Is
+  the model business critical?</td>
+  <td class=xl6632690 width=396 style='width:297pt'>Identifying if the model is
+  business critical helps to define the level of assurance needed to ensure it
+  is fit for purpose.</td>
+ </tr>
+ <tr height=83 style='height:62.5pt'>
+  <td height=83 class=xl6632690 width=315 style='height:62.5pt;width:236pt'>Who
+  needs to know the answer?</td>
+  <td class=xl6632690 width=396 style='width:297pt'>If you don’t know what your
+  outputs will be used for, you cannot be sure that they will meet user needs.
+  A good understanding of likely use cases and how you prioritise them is an
+  essential part of making sure that all parts of your analysis are fit for purpose.</td>
+ </tr>
+ <tr height=172 style='mso-height-source:userset;height:129.0pt'>
+  <td height=172 class=xl6632690 width=315 style='height:129.0pt;width:236pt'>Who
+  do we need to consult to make sure we meet the right user needs?</td>
+  <td class=xl6632690 width=396 style='width:297pt'>Analysis must be well
+  understood by relevant users, or else risks scope creep and misspecification.
+  You should identify stakeholders and users who should be consulted before
+  designing an analysis and take account of their views and considerations<span
+  style='mso-spacerun:yes'>  </span>wherever relevant. Consulting the right
+  stakeholders makes sure that your team and your users have a shared
+  understanding and vision of what is the best way to approach answering the
+  question, what the output should look like, how well the users understand the
+  process, its quality and limitations, and what can be done to tailor the
+  final ouput to best meet user needs.</td>
+ </tr>
+ <tr height=117 style='height:87.5pt'>
+  <td height=117 class=xl6732690 width=315 style='height:87.5pt;width:236pt'>How
+  will you know you have answered this question correctly?</td>
+  <td class=xl6632690 width=396 style='width:297pt'>Being clear about the
+  outputs required and the level of error that is acceptable is essential for
+  ensuring that the final output is accurate and reliable and that users and
+  your team have a good understanding of limitations and uncertainty. It is
+  also essential when designing verification and validation activities that
+  will help you to check the robustness of results under a range of plausible
+  assumptions about methods and data.</td>
+ </tr>
+ <tr height=183 style='height:137.5pt'>
+  <td height=183 class=xl6732690 width=315 style='height:137.5pt;width:236pt'>What
+  is the estimated time and resource required to answer this question (in
+  months)?</td>
+  <td class=xl6632690 width=396 style='width:297pt'>Without a clear
+  understanding of time and resource constraints, you may overcommit. It is
+  important to push back against unrealistic demands if the team is not able to
+  set aside sufficent time to effectively quality assure the analysis. The
+  users and commissioner should fully understand and accept the associated
+  risks to quality when time and resource pressures are unavoidable and will
+  mean that there are unavoidable risks to quality.<span
+  style='mso-spacerun:yes'> </span></td>
+ </tr>
+ <tr height=133 style='height:100.0pt'>
+  <td height=133 class=xl6932690 width=315 style='height:100.0pt;width:236pt'>What
+  are the consequences if the work is not carried out now?</td>
+  <td class=xl6632690 width=396 style='width:297pt'>Understanding why the work
+  needs to happen now will help you to prioritise and make sure that limited
+  resources are targeted to the right activities.</td>
+ </tr>
+ <tr height=100 style='height:75.0pt'>
+  <td height=100 class=xl6632690 width=315 style='height:75.0pt;width:236pt'>What
+  are the consequences if the work is not carried out correctly?</td>
+  <td class=xl6632690 width=396 style='width:297pt'>It is important to
+  understand potential legal, financial or reputational consequences if the
+  work is not carried out correctly so that you can design a proportionate set
+  of assurance activities. The nature and extent of the principal risks that
+  the organisation is willing to take in achieving its objectives should also
+  determined alongside informing decision making.</td>
+ </tr>
+ <tr height=83 style='height:62.5pt'>
+  <td height=83 class=xl6632690 width=315 style='height:62.5pt;width:236pt'>Who
+  is the commissioner, SRO and analytical assurer of this analysis?</td>
+  <td class=xl6632690 width=396 style='width:297pt'>Clear lines of
+  accountability strengthen assurance processes and make sure that important
+  decisions are signed off by the right people. There should be a clear
+  understanding of who is responsible for managing, producing and quality
+  assuring the analysis in the team.<span style='mso-spacerun:yes'> </span></td>
+ </tr>
+ <tr height=133 style='height:100.0pt'>
+  <td height=133 class=xl6832690 width=315 style='height:100.0pt;width:236pt'>What
+  tools and resources will you use during the production process? Are they the
+  best for the job?</td>
+  <td class=xl6632690 width=396 style='width:297pt'>Before starting an
+  analysis, identify all the skills and resources needed to produce the final
+  output in a sustainable and reproducible way and to quality assure it at
+  every step. The platform used to host the analysis and the software to build
+  and run the analysis should be appropriate given uses and risks. For example,
+  producing critical outputs in Excel does not comply with best practice and is
+  unlikely to be robust or verifiable.</td>
+ </tr>
+ <tr height=100 style='height:75.0pt'>
+  <td height=100 class=xl6632690 width=315 style='height:75.0pt;width:236pt'>Do
+  you have the right internal and external resources and capability to deliver
+  the analysis?</td>
+  <td class=xl6632690 width=396 style='width:297pt'>If the team lacks
+  capability, sufficient resource or time, this increases the risk that the
+  analysis will not be fit for purpose or sufficiently assured.<span
+  style='mso-spacerun:yes'> </span></td>
+ </tr>
+ <tr height=250 style='height:187.5pt'>
+  <td height=250 class=xl6632690 width=315 style='height:187.5pt;width:236pt'>What
+  are the anticipated risks of the analysis? Have you discussed this risk with
+  the customers?<span style='mso-spacerun:yes'> </span></td>
+  <td class=xl6632690 width=396 style='width:297pt'>You must identify potential
+  risks and their impact well in advance to enable effective mitigation and
+  quicker, confident decision-making. It is also important that users
+  understand risks to ensure that their expectations and requirements are met.
+  You should document how you have identified and are monitoring and mitigating
+  risks.</td>
+ </tr>
+ <tr height=283 style='height:212.5pt'>
+  <td height=283 class=xl6932690 width=315 style='height:212.5pt;width:236pt'>Have
+  you developed a contingency plan to put in place if the mitigation plan
+  fails?</td>
+  <td class=xl6632690 width=396 style='width:297pt'>Risks that would have a
+  high impact on the analysis but a low probability of occurring should still
+  be accounted for, or else risk serious harm to the public. Without well
+  designed contingencies we put the public at risk.</td>
+ </tr>
+ <tr height=117 style='height:87.5pt'>
+  <td height=117 class=xl6832690 width=315 style='height:87.5pt;width:236pt'>Does
+  the data and model comply with ethical requirements?<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6632690 width=396 style='width:297pt'>Analysis must comply with
+  ethics standards to ensure public confidence. Data ethics are an essential
+  part of any good analysis. You should consider the ethical implications of
+  the analysis and how they feed through to use of analysis when you create the
+  workflow and report your findings.</td>
+ </tr>
+ <tr height=167 style='height:125.0pt'>
+  <td height=167 class=xl6632690 width=315 style='height:125.0pt;width:236pt'>What
+  questions are outside the scope of the analysis?</td>
+  <td class=xl6632690 width=396 style='width:297pt'>Limitations affect the
+  workings of the analysis and the quality of outputs and what can be done with
+  them. By being clear about the limitations of the analysis we ensure that we
+  have mitigated or accepted them. Limitations must be documented so everybody
+  using the analysis has a shared understanding of them.<span
+  style='mso-spacerun:yes'>  </span></td>
+ </tr>
+ <tr height=133 style='height:100.0pt'>
+  <td height=133 class=xl6632690 width=315 style='height:100.0pt;width:236pt'>Will
+  internal auditing and peer review be performed?</td>
+  <td class=xl6632690 width=396 style='width:297pt'>Internal audit and peer
+  review are critical for monitoring and assuring that the analysis is
+  performed appropriately and its meeting the required aims and objectives. The
+  outcomes of the peer review should be documented and any relevant actions and
+  recommendations should be addressed and taken forward.</td>
+ </tr>
+ <tr height=150 style='height:112.5pt'>
+  <td height=150 class=xl6632690 width=315 style='height:112.5pt;width:236pt'>Will
+  external experts be involved in development and scruitny of analysis?</td>
+  <td class=xl6632690 width=396 style='width:297pt'>Your team should commission
+  external specialists to peer review or audit the analysis in proportion to
+  the risks around the analysis and its use. They should be.able to draw on
+  expertise and experience across government and beyond to get feedback, exchange
+  experience and best practices to improve the analysis.</td>
+  </tr>
+</table>
+
 
 ## AQUA Roles
 
@@ -133,6 +336,38 @@ Missed responsibilities in AQUA book, missed principles from Code of Practice, h
 | Is the model business critical? 
 </h2>
   <textarea id="content" contenteditable>Enter your answer here... </textarea> 
+
+
+
+<table style="border-collapse: collapse;">
+    <th> Quality Questions</th>
+    <th> Responsible individual</th>
+    <th> Answer</th>
+    <th> Is SRO satisfied with the answer provided? (Yes/No) </th>
+    <th> Date answer added</th>
+     <th> Next review due on</th>
+
+    
+
+  </tr style="border-bottom: 1px solid black;">
+  <tr>
+    <td>What question is the analysis trying to answer?</td>
+    <td> Commissioner, analyst </td>
+    <td><p id="content" contenteditable>Enter your answer here... </p></td>
+    <td> <a href="https://best-practice-and-impact.github.io/qa-of-code-guidance/intro.html">DUCK Book</a> <a href="https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/">RAP</a> </td>
+    <td>  </td>
+    <td>  </td>
+  </tr>
+  <tr>
+    <td>Why do we need to answer this question?</td>
+    <td> Commissioner, analyst, analytical assurer </td>
+    <td><p id="content" contenteditable>Enter your answer here... </p></td>
+    <td>  </td>
+    <td>  </td>
+    <td>  </td>
+  </tr>
+</table>
+
 
 
 :::
