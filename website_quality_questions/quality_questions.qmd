@@ -1,126 +1,337 @@
 ---
-format: 
-  html:
-    page-layout: full
-    embed-resources: true
-    toc: true
-    toc-location: left
-    toc-depth: 2
-output:
-  html_document:
+title: ""
 ---
-<nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link disabled" href="#">Guidance on Quality Questions</a>
-    </li>
-  </ul>
-</nav>
-
-# Introduction
-This guidance provides a set of questions to help analytical and statistical teams evaluate the quality of their analysis throughout the production cycle. 
-
-The aim of producing this guidance is:  
-1. To ensure there is a consistent end-to-end QA approach across divisions/departments.  
-2. To make it easier to comply with <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/416478/aqua_book_final_web.pdf">The Aqua Book</a> guidance and <a href="https://code.statisticsauthority.gov.uk/">Code of Practice for Statistics</a>.  
-3. To ensure there is a consistent understanding of roles and responsibilities towards producing high quality analysis and statistics.  
-4. To make it easier to produce important project documentation i.e., assumptions’ log, decision log, risk and register etc.  
-
-This guidance sits alongside a) Aqua book, which provides good practice advice on how to quality assure analysis in government and b) Code of Practice for Statistics, which sets the standards that producers of official statistics should commit to. Two other guidances have motivated us to produce this. One is Analysis Function guidance on <a href="https://analysisfunction.civilservice.gov.uk/policy-store/quality-questions-and-red-flags/#:~:text=The%20%27Quality%20Questions%20and%20Red,for%20National%20Statistics%20(ONS).">Quality questions and red flags</a>  and the other is Office for Statistics Regulation (OSR) guidance on <a href="https://osr.statisticsauthority.gov.uk/publication/regulatory-guidance-thinking-about-quality-when-producing-statistics/">Thinking about quality when producing statistics</a>. Both of these guidances provide a set of questions that analysts producing statistics can use to interrogate their work and assure its quality. 
-
-Building on these cross-government resources on best practice, this gudiance separates quality questions relevant for each stage of analytical cycle. The quality questions will only be fit for purpose if they are asked at the right stage, once that stage is passed, it will be difficult going back and address the risks.  
-
-Each question is linked with the Code of Practice for Statistics which is based on three pillars - trustworthiness, quality and value. The idea is to emphasize on the importance and relevance of each question in light of the three pillars. It would also help the anaytical/statistical teams better understand and apply these principles throught out the project life cycle.  
-
-Quality questions are also separated as per the responsible individuals required for answering them. The idea is to highlight a clear line of accountability as per the Aqua book guidance in an easy-to-understand manner. The hope is to make it easier for the teams to clearly see the Aqua roles.  
-
-
-## Structure of the guidance
-
-There are 60 questions in total covering all stages of analytical cycle. Answering 60 questions may seem a daunting task but this log of answers will later save your time on reading and fully undertsanding the Aqua book and in ensuring your analysis/statistics complies with Code of Practice. It would also help you in writing the analysis/output report along the way. Moreover, most of the answers would help in producing other important documents, for example, assumptions’ log, decision log, technical guide for users etc. 
-
-The Aqua book has divided the stages of analytical cycle into:  
-I) Scoping  
-II) Design  
-III) Conducting and checking analysis  
-IV) Delivery   
-
-Each stage is further sub-divided into the following tabs:
-
-### a) Importance
-
-It emphasizes on the importance of understanding each quality question and explains the potential risks and benefits around it.
-
-### b) Code of Practice for Statistics
-
-It shows the pillars and principles of Code of Practice for Statistics a quality questions relates to. The text in this column is copied from Code of Practice for Statistics. The Code is not concerned only with official statistics. It provides producers of non-official statistics with a framework they can voluntarily comply with.
-
-### c) Aqua roles  and responsibilities
-
-It explains the  the responsibilities required to deliver analysis that is fit-for-purpose. It links the quality questions with relevant responsibities at each stage of analytical cycle  as identified in the Aqua book. The roles and responisibilties in this tab are copied as is from AQUA book. 
-
-The Aqua book recommends the creation of four identifiable roles to cover different areas of responsibility- SRO, commissioner, analyst and analytical assurer. 
 
 To make the most out of this guidance, we strongly recommend that all teams identify the responsible individuals at the start of the analytical cycle. This is crucial as each of these individuals has a role in ensuring the analysis is fit-for-purpose.
 
-**Responsibilities of SRO**  
-- A Single Responsible Owner for each model throughout its lifecycle.  
-- Sign-off all important decisions madel about a model to ensure that it is fit-for-purpose, prior to its use.
 
-**Responsibilities of Commissioner**  
-- Ensures that context is understood so QA is appropriate and proportionate.  
-- Ensures that there is enough time and resource for required assurance and account for risk.  
-- Must understand strengths and limitations including uncertainty so results are interpreted correctly.  
-- Delivers QUALITY OF OUTCOME.
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse; 
+}
+</style>
 
-**Responsibilities of Analyst**  
-- Assist the commissioner in framing the question to ensure the right analysis is done.  
-- Manage external specialists.  
-- Design, build, document and run the analysis.  
-- Delivers QUALITY OF CONTENT.
+<table style="width:100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; font size="2" face="Courier New">
+<TR VALIGN=TOP>
+    <th style="text-align: center;"> Name of SRO</th>
+    <th style="text-align: center"> Name of Commissioner</th>
+    <th style="text-align: center"> Name of Analyst</th>
+    <th style="text-align: center"> Name of Analytical Assurer</th>
 
-**Responsibilities of Analytical Assurer**  
-- Ensures that the evidence is there to demonstrate that appropriate QA has happened and uncertainty is communicated appropriately.  
-- Advises the commissioner on whether appropriate QA has happened and about any outstanding risks.  
-- Involved throughout from design through to use.  
-- Delivers QUALITY OF PROCESS.
+</tr>
+ <tr height=83 style='height:62.5pt'>
+  <td> <p id="content" contenteditable>Enter name here...                         </p></td>
+  <td> <p id="content" contenteditable>Enter name here...                         </p></td>
+  <td> <p id="content" contenteditable>Enter name here...                         </p></td>
+  <td> <p id="content" contenteditable>Enter name here...                         </p></td>
 
-Whilst the Aqua Book refers to commissioners, SRO, analysts and analytical assurers, it is the responsibilities identified that are important, not the name of the role. The Aqua Book makes no statement of the particular level of seniority or grade of each of the occupiers of the roles — this will vary from project to project. 
-
-We suggest an SRO and commissioner to be at Grade 7 or above. The grade of an analyst can vary between EO to SEO and the analytical assurer should atleast be at an HEO level. If you are still unsure of deciding the roles among your team, please email ASAP@ons.gov.uk with "modelling" in the subject header and we will help you in making this decision. 
-
-### d) Log of Answers  
-
-This tab provides space in the form of editable text boxes (with no word limit) to write answers to the quality questions. We encourage commissioner, analyst and analytical assurer to answer all questions as per their responsibilties identified in the previous tab. SRO needs to sign-off all the answers. Its best to complete and save log of answers for each stage of analytical cycle. Answers can be saved by pressing Ctrl+S. To undo a action press Ctrl+Z. 
-
-As user needs or project aims may change over time, the template allows you to edit answers by simply changing the text in the log of answers.  
-
-## When to use this guidance?
-
-We encourgae all teams starting to work on a new project to use this guidance right from the scoping stage and create a log of answers. For teams, who are in the middle of an analysis can still use this guidance to reflect on the quality questions at the scoping and design stage and continue recording the answers up until the delivery stage. 
-
-## Which outputs this guidance applies to?
-
-The guidance applies to both ad-hoc releases and more regular outputs.  
-
-Regular outputs often fulfils at least one of the criteria of "business critical model" (i. drives essential financial and funding decisions; ii. essential to the achievement of business plan actions and priorities; iii. must be error free or else risk serious financial, legal, reputational damages or penalties). They require the highest level of scruitny and the governance arrangements must be appropriate for the level of risk.  
-
-Ad-hoc outputs with quick turnarounds and limited time and resources, the analysis still requires good QA to avoid costly mistakes. Ad-hoc outputs are often used as an evidence to make important policy decisions.  
-
-We strongly encourage the responsible owners of both regular and ad-hoc outputs to answer all questions relevant to their role. Completing the log of answers will only require a few hours of their time and it will make the team more confident to raise quality and resourcing issues, push back against unreasonable demands and to understand and communicate the potential risks right at the scoping stage.
-
-
-## Helpful resources
-
-The Data Quality Hub (DQHub) has a Wiki page full of resources on quality –  <a href="https://officenationalstatistics.sharepoint.com/sites/onswiki/SitePages/Quality-Central.aspx">Quality Central</a>. It includes lots of useful resources and manadtory training to help you guide and answer the quality questions. 
-
-# Stages of Analytical Cycle
-
-:::: {.panel-tabset}
+  </tr>
+</table>
 
 ## I. Scoping
 
 ::: {.panel-tabset}
+
+## Quality Questions
+
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+
+<table style="width:100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; font size="2" face="Courier New">
+<TR VALIGN=TOP>
+    <th> </th>
+    <th style="width:50%; text-align: center;"> Quality Questions</th>
+    <th style="width:50%; text-align: center;">Answers</th>
+    <th style="text-align: center"> Answer added by</th>
+    <th style="text-align: center"> Date answer added</th>
+    <th style="text-align: center"> Is SRO satisfied with the answer?</th>
+    <th style="text-align: center"> Next review due on</th>
+    <th style="text-align: center"> Has anything changed from last review?</th>
+
+
+</tr>
+ <tr height=83 style='height:62.5pt'>
+<td height=21 class=xl657005 width=31 style='height:15.5pt;width:24pt'>Q1</td>
+  <td class=xl657005 width=321 style='border-left:none;width:241pt'>What
+  question is the analysis trying to answer?</td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=21 style='height:15.5pt'>
+  <td height=21 class=xl657005 width=31 style='height:15.5pt;border-top:none;
+  width:24pt'>Q2</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>Why do we need to answer this question?</td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=33 style='height:25.0pt'>
+  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
+  width:24pt'>Q3</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>Which organisational priorities does this work address?</td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=21 style='height:15.5pt'>
+  <td height=21 class=xl657005 width=31 style='height:15.5pt;border-top:none;
+  width:24pt'>Q4</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>Is the model business critical?</td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=21 style='height:15.5pt'>
+  <td height=21 class=xl657005 width=31 style='height:15.5pt;border-top:none;
+  width:24pt'>Q5</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>Who needs to know the answer?</td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=33 style='height:25.0pt'>
+  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
+  width:24pt'>Q6</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>Who do we need to consult to make sure we meet the right user
+  needs?</td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=33 style='height:25.0pt'>
+  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
+  width:24pt'>Q7</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>How will you know you have answered this question correctly?</td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=33 style='height:25.0pt'>
+  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
+  width:24pt'>Q8</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>What is the estimated time and resource required to answer this
+  question (in months)?</td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=33 style='height:25.0pt'>
+  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
+  width:24pt'>Q9</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>What are the consequences if the work is not carried out now?</td>
+  
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=33 style='height:25.0pt'>
+  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
+  width:24pt'>Q10</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>What are the consequences if the work is not carried out
+  correctly?</td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=33 style='height:25.0pt'>
+  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
+  width:24pt'>Q11</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>Who is the commissioner, SRO and analytical assurer of this
+  analysis?</td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=33 style='height:25.0pt'>
+  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
+  width:24pt'>Q12</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>What tools and resources will you use during the production
+  process? Are they the best for the job?</td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=33 style='height:25.0pt'>
+  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
+  width:24pt'>Q13</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>Do you have the right internal and external resources and
+  capability to deliver the analysis?</td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=33 style='height:25.0pt'>
+  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
+  width:24pt'>Q14</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>What are the anticipated risks of the analysis? Have you
+  discussed this risk with the customers?<span
+  style='mso-spacerun:yes'> </span></td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=33 style='height:25.0pt'>
+  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
+  width:24pt'>Q15</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>Have you developed a contingency plan to put in place if the
+  mitigation plan fails?</td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=33 style='height:25.0pt'>
+  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
+  width:24pt'>Q16</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>Does the data and model comply with ethical requirements?<span
+  style='mso-spacerun:yes'> </span></td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=33 style='height:25.0pt'>
+  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
+  width:24pt'>Q17</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>What questions are outside the scope of the analysis?</td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=21 style='height:15.5pt'>
+  <td height=21 class=xl657005 width=31 style='height:15.5pt;border-top:none;
+  width:24pt'>Q18</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>Will internal auditing and peer review be performed?</td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=33 style='height:25.0pt'>
+  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
+  width:24pt'>Q19</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>Will external experts be involved in development and scruitny of
+  analysis?</td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+  </tr>
+</table>
 
 ## Importance 
 
@@ -936,7 +1147,14 @@ table, th, td {
   </tr>
 </table>
 
-## Log of Answers
+
+:::
+
+## II. Design
+
+::: {.panel-tabset}
+
+## Quality Questions
 
 <style>
 table, th, td {
@@ -945,221 +1163,104 @@ table, th, td {
 }
 </style>
 
-<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+<table style="width:100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; font size="2" face="Courier New">
 <TR VALIGN=TOP>
     <th> </th>
-    <th> Quality Questions</th>
-    <th> Answers</th>
-    <th> Is SRO satisfied with the answer provided?</th>
+    <th style="width:50%; text-align: center;"> Questions</th>
+    <th style="width:50%; text-align: center;">Answers</th>
+    <th style="text-align: center"> Answer added by</th>
+    <th style="text-align: center"> Date answer added</th>
+    <th style="text-align: center"> Is SRO satisfied with the answer?</th>
+    <th style="text-align: center"> Next review due on</th>
+    <th style="text-align: center"> Has anything changed from last review?</th>
+
+
 
 </tr>
  <tr height=83 style='height:62.5pt'>
-<td height=21 class=xl657005 width=31 style='height:15.5pt;width:24pt'>Q1</td>
-  <td class=xl657005 width=321 style='border-left:none;width:241pt'>What
-  question is the analysis trying to answer?</td>
+<td height=21 class=xl657005 width=31 style='height:15.5pt;width:24pt'>Q20</td>
+  <td class=xl657005 width=321 style='border-left:none;width:241pt'>	Is there a simple description in plain English of what the analysis is for and what it does?</td>
 
   <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
   <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
 
  </tr>
  <tr height=21 style='height:15.5pt'>
   <td height=21 class=xl657005 width=31 style='height:15.5pt;border-top:none;
-  width:24pt'>Q2</td>
+  width:24pt'>Q21</td>
   <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>Why do we need to answer this question?</td>
+  width:241pt'>Does the analysis have a logic flowchart which explains the end-to-end conceptual steps in the work flow?</td>
 
   <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
   <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
 
  </tr>
  <tr height=33 style='height:25.0pt'>
   <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q3</td>
+  width:24pt'>Q22</td>
   <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>Which organisational priorities does this work address?</td>
+  width:241pt'>When do you expect to start and finish each stage of analysis i.e., data collection, processing, quality assuarnce, analaysis and dissemination?</td>
 
   <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
   <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
 
  </tr>
  <tr height=21 style='height:15.5pt'>
   <td height=21 class=xl657005 width=31 style='height:15.5pt;border-top:none;
-  width:24pt'>Q4</td>
+  width:24pt'>Q23</td>
   <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>Is the model business critical?</td>
+  width:241pt'>Does any part of the analysis rely on manual processing? Have you considered the cost and benefits of fully automating the process?	</td>
 
   <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
   <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
 
  </tr>
  <tr height=21 style='height:15.5pt'>
   <td height=21 class=xl657005 width=31 style='height:15.5pt;border-top:none;
-  width:24pt'>Q5</td>
+  width:24pt'>Q24</td>
   <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>Who needs to know the answer?</td>
+  width:241pt'>What happens if any of your team members, reviewers or users find a mistake in your analysis? Do you have a clear and efficient process for addressing the concern and preventing it from happening again?</td>
 
   <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
   <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
 
  </tr>
  <tr height=33 style='height:25.0pt'>
   <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q6</td>
+  width:24pt'>Q25</td>
   <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>Who do we need to consult to make sure we meet the right user
-  needs?</td>
+  width:241pt'>Have you assessed uncertainty?</td>
 
   <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
   <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=33 style='height:25.0pt'>
-  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q7</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>How will you know you have answered this question correctly?</td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=33 style='height:25.0pt'>
-  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q8</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>What is the estimated time and resource required to answer this
-  question (in months)?</td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=33 style='height:25.0pt'>
-  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q9</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>What are the consequences if the work is not carried out now?</td>
-  
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=33 style='height:25.0pt'>
-  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q10</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>What are the consequences if the work is not carried out
-  correctly?</td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=33 style='height:25.0pt'>
-  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q11</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>Who is the commissioner, SRO and analytical assurer of this
-  analysis?</td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=33 style='height:25.0pt'>
-  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q12</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>What tools and resources will you use during the production
-  process? Are they the best for the job?</td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=33 style='height:25.0pt'>
-  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q13</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>Do you have the right internal and external resources and
-  capability to deliver the analysis?</td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=33 style='height:25.0pt'>
-  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q14</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>What are the anticipated risks of the analysis? Have you
-  discussed this risk with the customers?<span
-  style='mso-spacerun:yes'> </span></td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=33 style='height:25.0pt'>
-  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q15</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>Have you developed a contingency plan to put in place if the
-  mitigation plan fails?</td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=33 style='height:25.0pt'>
-  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q16</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>Does the data and model comply with ethical requirements?<span
-  style='mso-spacerun:yes'> </span></td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=33 style='height:25.0pt'>
-  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q17</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>What questions are outside the scope of the analysis?</td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=21 style='height:15.5pt'>
-  <td height=21 class=xl657005 width=31 style='height:15.5pt;border-top:none;
-  width:24pt'>Q18</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>Will internal auditing and peer review be performed?</td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=33 style='height:25.0pt'>
-  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q19</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>Will external experts be involved in development and scruitny of
-  analysis?</td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
 
   </tr>
 </table>
 
-:::
-
-## II. Design
-
-::: {.panel-tabset}
 
 ## Importance 
 
@@ -1173,7 +1274,7 @@ table, th, td {
 <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
 <TR VALIGN=TOP>
     <th> </th>
-    <th> Quality Questions</th>
+    <th> Questions</th>
     <th> Why do I need to know the answer to this?</th>
 
 </tr>
@@ -1276,7 +1377,7 @@ table, th, td {
 <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
 <TR VALIGN=TOP>
     <th> </th>
-    <th> Quality Questions</th>
+    <th> Questions</th>
     <th> Which pillar and principle of Code of Practice are relevant here?  
     *Trustworthiness (T), Quality (Q), Value (V)</th>
 
@@ -1373,7 +1474,7 @@ table, th, td {
 <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
 <TR VALIGN=TOP>
     <th> </th>
-    <th> Quality Questions</th>
+    <th> Questions</th>
     <th> Who is responsible for answering this in light of AQUA book?</th>
     <th> Which AQUA book responsibilities have a role?</th>
 
@@ -1470,7 +1571,15 @@ table, th, td {
   </tr>
 </table>
 
-## Log of Answers
+:::
+
+## III. Conducting and Checking Analysis
+
+
+::: {.panel-tabset}
+
+
+## Quality Questions
 
 <style>
 table, th, td {
@@ -1479,81 +1588,385 @@ table, th, td {
 }
 </style>
 
-<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+<table style="width:100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; font size="2" face="Courier New">
 <TR VALIGN=TOP>
     <th> </th>
-    <th> Quality Questions</th>
-    <th> Answers</th>
-    <th> Is SRO satisfied with the answer provided?</th>
+    <th style="width:50%; text-align: center;"> Questions</th>
+    <th style="width:50%; text-align: center;">Answers</th>
+    <th style="text-align: center"> Answer added by</th>
+    <th style="text-align: center"> Date answer added</th>
+    <th style="text-align: center"> Is SRO satisfied with the answer?</th>
+    <th style="text-align: center"> Next review due on</th>
+    <th style="text-align: center"> Has anything changed from last review?</th>
+
 
 </tr>
  <tr height=83 style='height:62.5pt'>
-<td height=21 class=xl657005 width=31 style='height:15.5pt;width:24pt'>Q20</td>
-  <td class=xl657005 width=321 style='border-left:none;width:241pt'>	Is there a simple description in plain English of what the analysis is for and what it does?</td>
+<td height=21 class=xl657005 width=31 style='height:15.5pt;width:24pt'>Q26</td>
+  <td class=xl657005 width=321 style='border-left:none;width:241pt'>How the data used in the analysis will be processed prior to and during use?</td>
 
   <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
   <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
 
  </tr>
  <tr height=21 style='height:15.5pt'>
   <td height=21 class=xl657005 width=31 style='height:15.5pt;border-top:none;
-  width:24pt'>Q21</td>
+  width:24pt'>Q27</td>
   <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>Does the analysis have a logic flowchart which explains the end-to-end conceptual steps in the work flow?</td>
+  width:241pt'>	Is the data appropriate given the methods selected?</td>
 
   <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
   <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
 
  </tr>
  <tr height=33 style='height:25.0pt'>
   <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q22</td>
+  width:24pt'>Q28</td>
   <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>When do you expect to start and finish each stage of analysis i.e., data collection, processing, quality assuarnce, analaysis and dissemination?</td>
+  width:241pt'>What are the strengths and limitations of the data that you use?</td>
 
   <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
   <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
 
  </tr>
  <tr height=21 style='height:15.5pt'>
   <td height=21 class=xl657005 width=31 style='height:15.5pt;border-top:none;
-  width:24pt'>Q23</td>
+  width:24pt'>Q29</td>
   <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>Does any part of the analysis rely on manual processing? Have you considered the cost and benefits of fully automating the process?	</td>
+  width:241pt'>	Is there a robust relationship between your team and data providers? Does your data provider have a good understanding of how and why you are using their data?
+Do you have a good understanding of how the data provider collects, processes and quality assures the data?</td>
 
   <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
   <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
 
  </tr>
  <tr height=21 style='height:15.5pt'>
   <td height=21 class=xl657005 width=31 style='height:15.5pt;border-top:none;
-  width:24pt'>Q24</td>
+  width:24pt'>Q30</td>
   <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>What happens if any of your team members, reviewers or users find a mistake in your analysis? Do you have a clear and efficient process for addressing the concern and preventing it from happening again?</td>
+  width:241pt'>	Is there a formal agreement in place that specifies when, what and how the data will be received? If not, do you think this would be helpful?</td>
 
   <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
   <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
 
  </tr>
  <tr height=33 style='height:25.0pt'>
   <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q25</td>
+  width:24pt'>Q31</td>
   <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>Have you assessed uncertainty?</td>
+  width:241pt'>Do you know what quality checks are carried out on the data before you receive them?</td>
 
   <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
   <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
 
+ </tr>
+ <tr height=33 style='height:25.0pt'>
+  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
+  width:24pt'>Q32</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>How will you work with your data provider when your data requirements change?</td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=33 style='height:25.0pt'>
+  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
+  width:24pt'>Q33</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>	How do you know if your data provider makes a change to their systems or processes, which could impact the data you receive and/or the statistics you produce?</td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=33 style='height:25.0pt'>
+  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
+  width:24pt'>Q34</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>How did you choose the methods for the analysis? How do you know the method you are using is appropriate? </td>
+  
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+ </tr>
+ <tr height=33 style='height:25.0pt'>
+  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
+  width:24pt'>Q35</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>Are reasonable alternative methods have been explored and rejected for good reasons?</td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=33 style='height:25.0pt'>
+  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
+  width:24pt'>Q36</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>How do you know that your analysis or statistical process is working correctly?</td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=33 style='height:25.0pt'>
+  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
+  width:24pt'>Q37</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>How do you know that your analysis or statistical process is working correctly?</td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=33 style='height:25.0pt'>
+  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
+  width:24pt'>Q38</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>How the assumptions are validated and assured prior to use?</td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=33 style='height:25.0pt'>
+  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
+  width:24pt'>Q39</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>	How do you measure and report uncertainty in your analysis?<span
+  style='mso-spacerun:yes'> </span></td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=33 style='height:25.0pt'>
+  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
+  width:24pt'>Q40</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>	Have you considered the implications of any unquantified uncertainties?</td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=33 style='height:25.0pt'>
+  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
+  width:24pt'>Q41</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>Can you explain the impact of your work/output on downstream processes? Are there any risks around these dependencies?<span
+  style='mso-spacerun:yes'> </span></td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=33 style='height:25.0pt'>
+  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
+  width:24pt'>Q42</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>All or part of the analysis is reliant on a single person?</td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=21 style='height:15.5pt'>
+  <td height=21 class=xl657005 width=31 style='height:15.5pt;border-top:none;
+  width:24pt'>Q43</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>	Is it clear why important decisions were made and who made them?</td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=33 style='height:25.0pt'>
+  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
+  width:24pt'>Q44</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>	If changes need to be made to any code or datasets, is it difficult to track who made these changes and why those changes were made? </td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=33 style='height:25.0pt'>
+  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
+  width:24pt'>Q45</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>	Would another analyst be able to reproduce your model output or continue the work (without talking to you first)? </td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+  </tr>
+ <tr height=33 style='height:25.0pt'>
+  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
+  width:24pt'>Q46</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>	Do you use internal peer review to check scripts and code, documentation, implementation of methods, processes and outputs? </td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+  
+  </tr>
+ <tr height=33 style='height:25.0pt'>
+  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
+  width:24pt'>Q47</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>	Is your code and analysis ever peer reviewed by someone outside your team or organisation?<span
+  style='mso-spacerun:yes'> </span></td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=33 style='height:25.0pt'>
+  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
+  width:24pt'>Q48</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>	What is the assessment of the quality of your analytical outputs?</td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+ </tr>
+ <tr height=21 style='height:15.5pt'>
+  <td height=21 class=xl657005 width=31 style='height:15.5pt;border-top:none;
+  width:24pt'>Q49</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>	How do you assure yourselves that analysis carried out is correct?</td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=33 style='height:25.0pt'>
+  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
+  width:24pt'>Q50</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>		Do the outputs of your analysis match reported content? </td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+
+ </tr>
+ <tr height=33 style='height:25.0pt'>
+  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
+  width:24pt'>Q51</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'>	If you find outliers or unusual trends in the data, what steps are taken to investigate them? </td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
   </tr>
 </table>
 
 
-:::
-
-## III. Conducting and Checking Analysis
-
-
-::: {.panel-tabset}
 
 ## Importance 
 
@@ -1567,7 +1980,7 @@ table, th, td {
 <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
 <TR VALIGN=TOP>
     <th> </th>
-    <th> Quality Questions</th>
+    <th> Questions</th>
     <th> Why do I need to know the answer to this?</th>
 
 </tr>
@@ -1937,7 +2350,7 @@ table, th, td {
 <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
 <TR VALIGN=TOP>
     <th> </th>
-    <th> Quality Questions</th>
+    <th> Questions</th>
     <th> Which pillar and principle of Code of Practice are relevant here?  
     *Trustworthiness (T), Quality (Q), Value (V)</th>
 
@@ -2292,7 +2705,7 @@ table, th, td {
 <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
 <TR VALIGN=TOP>
     <th> </th>
-    <th> Quality Questions</th>
+    <th> Questions</th>
     <th> Who is responsible for answering this in light of AQUA book?</th>
     <th> Which AQUA book responsibilities have a role?</th>
 
@@ -2678,7 +3091,14 @@ table, th, td {
   </tr>
 </table>
 
-## Log of Answers
+:::
+
+## IV. Delivery
+
+::: {.panel-tabset}
+
+## Quality Questions
+
 
 <style>
 table, th, td {
@@ -2687,283 +3107,145 @@ table, th, td {
 }
 </style>
 
-<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+<table style="width:100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; font size="2" face="Courier New">
 <TR VALIGN=TOP>
     <th> </th>
-    <th> Quality Questions</th>
-    <th> Answers</th>
-    <th> Is SRO satisfied with the answer provided?</th>
+    <th style="width:50%; text-align: center;"> Questions</th>
+    <th style="width:50%; text-align: center;">Answers</th>
+    <th style="text-align: center"> Answer added by</th>
+    <th style="text-align: center"> Date answer added</th>
+    <th style="text-align: center"> Is SRO satisfied with the answer?</th>
+    <th style="text-align: center"> Next review due on</th>
+    <th style="text-align: center"> Has anything changed from last review?</th>
+
+
 
 </tr>
  <tr height=83 style='height:62.5pt'>
-<td height=21 class=xl657005 width=31 style='height:15.5pt;width:24pt'>Q26</td>
-  <td class=xl657005 width=321 style='border-left:none;width:241pt'>How the data used in the analysis will be processed prior to and during use?</td>
+<td height=21 class=xl657005 width=31 style='height:15.5pt;width:24pt'>Q52</td>
+  <td class=xl657005 width=321 style='border-left:none;width:241pt'>Could you give a clear account of what can and cannot be inferred from your final output?</td>
 
   <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
   <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
 
  </tr>
  <tr height=21 style='height:15.5pt'>
   <td height=21 class=xl657005 width=31 style='height:15.5pt;border-top:none;
-  width:24pt'>Q27</td>
+  width:24pt'>Q53</td>
   <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>	Is the data appropriate given the methods selected?</td>
+  width:241pt'>Have you assessed the impact of the data and model limitations and set out how they will affect the quality and use of the outputs?</td>
 
   <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
   <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
 
  </tr>
  <tr height=33 style='height:25.0pt'>
   <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q28</td>
+  width:24pt'>Q54</td>
   <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>What are the strengths and limitations of the data that you use?</td>
+  width:241pt'>	Have you sense checked outputs with user groups and stakeholders?</td>
 
   <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
   <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
+ </tr>
+ <tr height=21 style='height:15.5pt'>
+  <td height=21 class=xl657005 width=31 style='height:15.5pt;border-top:none;
+  width:24pt'>Q55</td>
+  <td class=xl657005 width=321 style='border-top:none;border-left:none;
+  width:241pt'> Is uncertainty related to data quality, assumptions and methodology clearly communicated to users?</td>
+
+  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
+  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
 
  </tr>
  <tr height=21 style='height:15.5pt'>
   <td height=21 class=xl657005 width=31 style='height:15.5pt;border-top:none;
-  width:24pt'>Q29</td>
+  width:24pt'>Q56</td>
   <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>	Is there a robust relationship between your team and data providers? Does your data provider have a good understanding of how and why you are using their data?
-Do you have a good understanding of how the data provider collects, processes and quality assures the data?</td>
+  width:241pt'> Are the implications of unquantified uncertainties communicated to users?</td>
 
   <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
   <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=21 style='height:15.5pt'>
-  <td height=21 class=xl657005 width=31 style='height:15.5pt;border-top:none;
-  width:24pt'>Q30</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>	Is there a formal agreement in place that specifies when, what and how the data will be received? If not, do you think this would be helpful?</td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
 
  </tr>
  <tr height=33 style='height:25.0pt'>
   <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q31</td>
+  width:24pt'>Q57</td>
   <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>Do you know what quality checks are carried out on the data before you receive them?</td>
+  width:241pt'>	Is model documentation including technical guide publicly available?</td>
 
   <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
   <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
 
  </tr>
  <tr height=33 style='height:25.0pt'>
   <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q32</td>
+  width:24pt'>Q58</td>
   <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>How will you work with your data provider when your data requirements change?</td>
+  width:241pt'>	Does the technical guide explains how to use the model to obtain valid outputs?</td>
 
   <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
   <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
 
  </tr>
  <tr height=33 style='height:25.0pt'>
   <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q33</td>
+  width:24pt'>Q59</td>
   <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>	How do you know if your data provider makes a change to their systems or processes, which could impact the data you receive and/or the statistics you produce?</td>
+  width:241pt'>Have you fully documented the model code?</td>
 
   <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
   <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
 
  </tr>
  <tr height=33 style='height:25.0pt'>
   <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q34</td>
+  width:24pt'>Q60</td>
   <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>How did you choose the methods for the analysis? How do you know the method you are using is appropriate? </td>
+  width:241pt'>Are users able to feed back on the suitability of outputs?</td>
   
   <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
+  <td> <p id="content" contenteditable> Enter full name</p></td>
+  <td> <p id="content" contenteditable> Enter date </p></td>
   <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=33 style='height:25.0pt'>
-  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q35</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>Are reasonable alternative methods have been explored and rejected for good reasons?</td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=33 style='height:25.0pt'>
-  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q36</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>How do you know that your analysis or statistical process is working correctly?</td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=33 style='height:25.0pt'>
-  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q37</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>How do you know that your analysis or statistical process is working correctly?</td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=33 style='height:25.0pt'>
-  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q38</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>How the assumptions are validated and assured prior to use?</td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=33 style='height:25.0pt'>
-  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q39</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>	How do you measure and report uncertainty in your analysis?<span
-  style='mso-spacerun:yes'> </span></td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=33 style='height:25.0pt'>
-  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q40</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>	Have you considered the implications of any unquantified uncertainties?</td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=33 style='height:25.0pt'>
-  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q41</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>Can you explain the impact of your work/output on downstream processes? Are there any risks around these dependencies?<span
-  style='mso-spacerun:yes'> </span></td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=33 style='height:25.0pt'>
-  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q42</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>All or part of the analysis is reliant on a single person?</td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=21 style='height:15.5pt'>
-  <td height=21 class=xl657005 width=31 style='height:15.5pt;border-top:none;
-  width:24pt'>Q43</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>	Is it clear why important decisions were made and who made them?</td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=33 style='height:25.0pt'>
-  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q44</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>	If changes need to be made to any code or datasets, is it difficult to track who made these changes and why those changes were made? </td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=33 style='height:25.0pt'>
-  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q45</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>	Would another analyst be able to reproduce your model output or continue the work (without talking to you first)? </td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-  </tr>
- <tr height=33 style='height:25.0pt'>
-  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q46</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>	Do you use internal peer review to check scripts and code, documentation, implementation of methods, processes and outputs? </td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-  
-  </tr>
- <tr height=33 style='height:25.0pt'>
-  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q47</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>	Is your code and analysis ever peer reviewed by someone outside your team or organisation?<span
-  style='mso-spacerun:yes'> </span></td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=33 style='height:25.0pt'>
-  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q48</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>	What is the assessment of the quality of your analytical outputs?</td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=21 style='height:15.5pt'>
-  <td height=21 class=xl657005 width=31 style='height:15.5pt;border-top:none;
-  width:24pt'>Q49</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>	How do you assure yourselves that analysis carried out is correct?</td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=33 style='height:25.0pt'>
-  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q50</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>		Do the outputs of your analysis match reported content? </td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=33 style='height:25.0pt'>
-  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q51</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>	If you find outliers or unusual trends in the data, what steps are taken to investigate them? </td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
+  <td> <p id="content" contenteditable> Enter next review date </p></td>
+  <td> <p id="content" contenteditable> Enter text </p></td>
 
   </tr>
 </table>
 
-
-:::
-
-## IV. Delivery
-
-::: {.panel-tabset}
 
 ## Importance 
 
@@ -2977,7 +3259,7 @@ table, th, td {
 <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
 <TR VALIGN=TOP>
     <th> </th>
-    <th> Quality Questions</th>
+    <th> Questions</th>
     <th> Why do I need to know the answer to this?</th>
 
 </tr>
@@ -3114,7 +3396,7 @@ table, th, td {
 <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
 <TR VALIGN=TOP>
     <th> </th>
-    <th> Quality Questions</th>
+    <th> Questions</th>
     <th> Which pillar and principle of Code of Practice are relevant here?  
     *Trustworthiness (T), Quality (Q), Value (V)</th>
 
@@ -3262,7 +3544,7 @@ table, th, td {
 <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
 <TR VALIGN=TOP>
     <th> </th>
-    <th> Quality Questions</th>
+    <th> Questions</th>
     <th> Who is responsible for answering this in light of AQUA book?</th>
     <th> Which AQUA book responsibilities have a role?</th>
 
@@ -3408,125 +3690,7 @@ table, th, td {
   </tr>
 </table>
 
-## Log of Answers
-
-
-<style>
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-</style>
-
-<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
-<TR VALIGN=TOP>
-    <th> </th>
-    <th> Quality Questions</th>
-    <th> Answers</th>
-    <th> Is SRO satisfied with the answer provided?</th>
-
-</tr>
- <tr height=83 style='height:62.5pt'>
-<td height=21 class=xl657005 width=31 style='height:15.5pt;width:24pt'>Q52</td>
-  <td class=xl657005 width=321 style='border-left:none;width:241pt'>Could you give a clear account of what can and cannot be inferred from your final output?</td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=21 style='height:15.5pt'>
-  <td height=21 class=xl657005 width=31 style='height:15.5pt;border-top:none;
-  width:24pt'>Q53</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>Have you assessed the impact of the data and model limitations and set out how they will affect the quality and use of the outputs?</td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=33 style='height:25.0pt'>
-  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q54</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>	Have you sense checked outputs with user groups and stakeholders?</td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=21 style='height:15.5pt'>
-  <td height=21 class=xl657005 width=31 style='height:15.5pt;border-top:none;
-  width:24pt'>Q55</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'> Is uncertainty related to data quality, assumptions and methodology clearly communicated to users?</td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=21 style='height:15.5pt'>
-  <td height=21 class=xl657005 width=31 style='height:15.5pt;border-top:none;
-  width:24pt'>Q56</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'> Are the implications of unquantified uncertainties communicated to users?</td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=33 style='height:25.0pt'>
-  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q57</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>	Is model documentation including technical guide publicly available?</td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=33 style='height:25.0pt'>
-  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q58</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>	Does the technical guide explains how to use the model to obtain valid outputs?</td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=33 style='height:25.0pt'>
-  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q59</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>Have you fully documented the model code?</td>
-
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
- </tr>
- <tr height=33 style='height:25.0pt'>
-  <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
-  width:24pt'>Q60</td>
-  <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>Are users able to feed back on the suitability of outputs?</td>
-  
-  <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
-  <td> <p id="content" contenteditable> Yes/No </p></td>
-
-  </tr>
-</table>
 
 :::
 
 :::
-
-
-# Feedback 
-
-We are keen to understand the challenges faced by analytical and statistical teams within ONS in complying with best practice. To evaluate the effectiveness of this guidance in understanding the Aqua roles and Code of Practice for Statistics, we have designed a short survey.  
-
-Please click on the following link to access the survey: <https://forms.office.com/e/ya2ZzRbGHM>
-
-Your feedback is highly appreciated and will help us in creating additional tools and resources on best practice for producing quality analysis.
-
-If you have any further questions about this guidance or survey please email ASAP@ons.gov.uk with "modelling" in the subject header.

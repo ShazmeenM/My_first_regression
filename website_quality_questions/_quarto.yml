@@ -1,0 +1,42 @@
+project:
+  type: website
+
+website:
+  page-navigation: true
+  title: "Guidance on Quality Questions"
+  navbar:
+    left:
+      - text: "Introduction"
+        file: aims.qmd
+      - text: "Quality Questions"
+        file: quality_questions.qmd
+      - text: "FAQs"
+        file: faqs.qmd
+      - text: "Feedback"
+        file: feedback.qmd
+
+
+sidebar:
+    - title: "Tutorials"
+      style: "docked"
+      background: light
+      contents:
+        - tutorials.qmd
+        - tutorial-1.qmd
+
+    - title: "How-To"
+      contents:
+        - howto.qmd
+        # navigation items
+
+
+format:
+  html:
+    page-layout: full
+    embed-resources: true
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+
