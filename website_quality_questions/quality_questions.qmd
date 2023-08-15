@@ -16,8 +16,8 @@ table, th, td {
 <TR VALIGN=TOP>
     <th style="text-align: center;"> Name of SRO</th>
     <th style="text-align: center"> Name of Commissioner</th>
-    <th style="text-align: center"> Name of Analyst</th>
-    <th style="text-align: center"> Name of Analytical Assurer</th>
+    <th style="text-align: center"> Name of Analyst(s)</th>
+    <th style="text-align: center"> Name of Analytical Assurer(s)</th>
 
 </tr>
  <tr height=83 style='height:62.5pt'>

@@ -1,12 +1,12 @@
 ## When to use this guidance?
 
-We encourgae all teams starting to work on a new project to use this guidance right from the scoping stage and create a log of answers. For teams, who are in the middle of an analysis, they can still use this guidance to reflect on the quality questions at the scoping and design stage and continue recording the answers up until the delivery stage. 
+We encourage all teams starting to work on a new project to use this guidance right from the scoping stage and create a log of answers. For teams, who are in the middle of an analysis, they can still use this guidance to reflect on the quality questions at the scoping and design stage and continue recording the answers up until the delivery stage. 
 
 ## Which outputs this guidance apply to?
 
 The guidance applies to both ad-hoc releases and more regular outputs.  
 
-Regular outputs often fulfils at least one of the criteria of "business critical model" (i. drives essential financial and funding decisions; ii. essential to the achievement of business plan actions and priorities; iii. must be error free or else risk serious financial, legal, reputational damages or penalties). They require the highest level of scruitny and the governance arrangements must be appropriate for the level of risk.  
+Regular outputs often fulfil at least one of the criteria of "business critical model" (i. drives essential financial and funding decisions; ii. essential to the achievement of business plan actions and priorities; iii. must be error free or else risk serious financial, legal, reputational damages or penalties). They require the highest level of scrutiny and the governance arrangements must be appropriate for the level of risk.  
 
 Ad-hoc outputs with quick turnarounds and limited time and resources, the analysis still requires good QA to avoid costly mistakes. Ad-hoc outputs are often used as an evidence to make important policy decisions.  
 
@@ -20,4 +20,4 @@ We suggest an SRO and commissioner to be at Grade 7 or above. If you are still u
 
 ## What help is available to answer the quality questions?
 
-The Data Quality Hub (DQHub) has a Wiki page full of resources on quality –  <a href="https://officenationalstatistics.sharepoint.com/sites/onswiki/SitePages/Quality-Central.aspx">Quality Central</a>. It includes lots of useful resources and manadtory training to help you guide and answer the quality questions. 
+The Data Quality Hub (DQHub) has a Wiki page full of resources on quality –  <a href="https://officenationalstatistics.sharepoint.com/sites/onswiki/SitePages/Quality-Central.aspx">Quality Central</a>. It includes lots of useful resources and mandatory training to help you guide and answer the quality questions. 
