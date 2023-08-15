@@ -8,7 +8,8 @@ The repository contains the follwing folders:
 1) Commissioning: It contains Excel template on commissioning where the modelling teams can document the scope, limitations and risks around the models as well as providing information on specific roles and responsibilties.
 2) Assumptions: It contains a standard template to record the assumptions made about the model, justify their suitability given the modelling scenario, proof of internal and external verification and the quality rating of each assumption. The folder also contains a markdown document and a package that will search the current directory for assumptions and write the log to the same directory.
 3) QA_report: It contains an automated template which include some generic functions on data quality checks, for example, checking for any logical or arithmetic relationships in the data and check if values fall inside an acceptable/expected range. The idea is to produce a summary of the results of tests performed on the most recent data run.  
-4) Data: Example dataset on house prices and university dropouts.
+4) Guidance on Quality Questions: The folder contains a tool on guidance on qulaity questions which provides a set of questions to help analytical and statistical teams evaluate the quality of their analysis throughout the analytical cycle. The tool is in the form of an interactive website which can be found in the site folder.  
+5) Data: Example dataset on house prices and university dropouts.
 
 # Software requirements  
 Python/R  
