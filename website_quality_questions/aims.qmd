@@ -20,7 +20,7 @@ Quality questions are also separated as per the responsible individuals required
 
 ## Structure of the guidance
 
-There are 60 questions in total covering all stages of analytical cycle. Answering 60 questions may seem a daunting task but this log of answers would later help you in fully understanding the Aqua book and in ensuring your analysis/statistics complies with Code of Practice. It would also help you in writing the analysis/output report along the way. Moreover, most of the answers would help in producing other important documents, for example, assumptions’ log, decision log, technical guide for users etc. 
+There are 60 questions in total covering all stages of analytical cycle. Answering 60 questions may seem a daunting task but this log of answers would later help you in fully understanding the Aqua book and in ensuring your analysis/statistics complies with Code of Practice. It would also help you in writing the analysis/output report along the way. Moreover, most of the answers would help in producing other important documents, for example, assumptions’ log, decision log, technical guide for users, QIP etc. 
 
 The Aqua book has divided the stages of analytical cycle into:  
 I) Scoping  

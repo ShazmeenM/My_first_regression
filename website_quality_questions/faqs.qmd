@@ -1,6 +1,6 @@
 ## When to use this guidance?
 
-We encourage all teams starting to work on a new project to use this guidance right from the scoping stage and create a log of answers. For teams, who are in the middle of an analysis, they can still use this guidance to reflect on the quality questions at the scoping and design stage and continue recording the answers up until the delivery stage. 
+We encourage all teams starting to work on a new project to use this guidance right from the scoping stage. For teams, who are in the middle of an analysis, they can still use this guidance to reflect on the quality questions at the scoping and design stage and continue recording the answers up until the delivery stage. 
 
 ## Which outputs this guidance apply to?
 
