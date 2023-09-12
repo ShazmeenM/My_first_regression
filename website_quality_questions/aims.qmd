@@ -1,3 +1,7 @@
+---
+title: ""
+---
+
 ## Aims
 
 This guidance provides a set of questions to help analytical and statistical teams evaluate the quality of their analysis throughout the production cycle. We hope that this guidance would help in meeting the Office for National Statistics's (ONS) strategic objectives for improving statistical quality.^[See ONS Statistical Quality Improvement Strategy: https://www.ons.gov.uk/methodology/methodologytopicsandstatisticalconcepts/qualityinofficialstatistics/onsstatisticalqualityimprovementstrategy]
