@@ -21,6 +21,7 @@ format:
     page-layout: full
     theme: cosmo
     toc: true
+    embed-resources: true
 
 
 
