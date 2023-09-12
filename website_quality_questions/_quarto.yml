@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: _site
 
 website:
   page-navigation: true
@@ -7,36 +8,20 @@ website:
   navbar:
     left:
       - text: "Introduction"
-        file: aims.qmd
+        href: aims.qmd
       - text: "Quality Questions"
-        file: quality_questions.qmd
+        href: quality_questions.qmd
       - text: "FAQs"
-        file: faqs.qmd
+        href: faqs.qmd
       - text: "Feedback"
-        file: feedback.qmd
-
-
-sidebar:
-    - title: "Tutorials"
-      style: "docked"
-      background: light
-      contents:
-        - tutorials.qmd
-        - tutorial-1.qmd
-
-    - title: "How-To"
-      contents:
-        - howto.qmd
-        # navigation items
-
+        href: feedback.qmd
 
 format:
   html:
     page-layout: full
-    embed-resources: true
     theme: cosmo
-    css: styles.css
     toc: true
+
 
 
 
