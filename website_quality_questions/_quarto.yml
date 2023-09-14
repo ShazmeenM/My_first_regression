@@ -3,7 +3,6 @@ project:
   output-dir: docs
 
 website:
-  page-navigation: true
   title: "Guidance on Quality Questions"
   navbar:
     left:
