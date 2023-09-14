@@ -41,8 +41,7 @@ This tab lists the quality questions relevant for each stage of analytical cycle
 As user needs or project aims may change over time, the template allows you to edit answers by simply changing the text in the editable text boxes. To track these changes, the person writing the answer should include their full-name, the date they have added the answer, and the date the next review is due on. 
 
 
-SRO needs to sign-off all the answers. Its best to complete and save log of answers for each stage of analytical cycle. Answers can be saved by pressing Ctrl+S. To undo a action press Ctrl+Z. Pressing Ctrl+S will automatically download a copy of the page on your machine. 
-
+Senior responsible owner (SRO) needs to sign-off all the answers. Its best to complete and save log of answers for each stage of analytical cycle. Answers can be saved by pressing Ctrl+S. To undo a action press Ctrl+Z. Pressing Ctrl+S will automatically download a copy of the page on your machine. 
 
 
 ### b) Importance
