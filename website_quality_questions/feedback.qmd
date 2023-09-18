@@ -1,5 +1,8 @@
 ---
 title: ""
+format:
+  html:
+    embed-resources: true
 ---
 
 # Feedback 
