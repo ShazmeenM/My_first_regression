@@ -1760,7 +1760,7 @@ Do you have a good understanding of how the data provider collects, processes an
   <td height=33 class=xl657005 width=31 style='height:25.0pt;border-top:none;
   width:24pt'>Q37</td>
   <td class=xl657005 width=321 style='border-top:none;border-left:none;
-  width:241pt'>How do you know that your analysis or statistical process is working correctly?</td>
+  width:241pt'>Can you describe the assumptions of your analysis, when they were made and who made them and signed them off?</td>
 
   <td> <p id="content" contenteditable>Enter your answer here...                         </p></td>
   <td> <p id="content" contenteditable> Enter full name</p></td>
